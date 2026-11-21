@@ -43,3 +43,37 @@ Si tu souhaites exécuter ou inspecter ce projet en local, suis les étapes ci-d
 1. **Cloner le dépôt :**
    ```bash
    git clone [https://github.com/exauce21/nom-de-ton-repo.git](https://github.com/exauce21/my-portfolio.git)
+---
+
+## 🗂️ Structure du site
+
+```
+my-portfolio/
+├── index.html        → Accueil : hero interactif, à propos, projets choisis, services, clients, recommandations, contact
+├── projets.html      → Liste complète des projets + filtres (Brand identity / UI & Dev / Sites web)
+├── projet.html       → Étude de cas (projet.html?p=<slug>) : galerie, lightbox, projet suivant
+├── 404.html
+├── css/style.css     → Design system (tokens, typographie, composants, responsive)
+├── js/
+│   ├── data.js       → Source unique des projets (ajouter / modifier un projet ici)
+│   ├── core.js       → Commun : horloge Paris, menu mobile, animations au scroll, copie de l'email
+│   ├── hero.js       → Traînée d'images au passage de la souris + parallaxe du hero
+│   ├── works.js      → Liste des projets, aperçu aléatoire au survol, filtres
+│   └── project.js    → Rendu des pages étude de cas + lightbox
+├── assets/
+│   ├── fonts/        → Polices auto-hébergées (Libre Caslon Condensed, Geist, Geist Mono)
+│   └── img/
+│       ├── projets/<slug>/   → Visuels brand optimisés (NN.webp + NN-sm.webp)
+│       ├── web/              → Captures des sites en ligne
+│       ├── clients/          → Logos clients en noir & blanc (PNG transparents)
+│       └── portrait.webp, og-image.jpg, favicon.svg
+└── projet/           → Fichiers sources originaux (non utilisés par le site, inutile de les déployer)
+```
+
+### Ajouter un projet
+1. Exporter les visuels en `.webp` dans `assets/img/projets/<slug>/` (`01.webp` ~1050×1400 et `01-sm.webp` ~480×640, etc.).
+2. Ajouter une entrée dans `js/data.js` (`kind`, `name`, `sector`, `tags: ['brand','ui','dev']`, `images`, `description`…).
+3. Pour le mettre en avant sur l'accueil, ajouter son `slug` dans `featured`.
+
+### Lancer en local
+Aucune dépendance ni build : ouvrir `index.html`, ou servir le dossier (`npx serve .` / `python3 -m http.server`).
