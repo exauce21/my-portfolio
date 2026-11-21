@@ -228,7 +228,9 @@
     initYear();
     EY.observe();
     var reveal = function () { root.classList.add('is-loaded'); };
-    if (document.fonts && document.fonts.ready) {
+    if (EY.preloader) {
+      EY.preloader.then(function () { requestAnimationFrame(reveal); });
+    } else if (document.fonts && document.fonts.ready) {
       Promise.race([document.fonts.ready, new Promise(function (r) { setTimeout(r, 900); })]).then(function () {
         requestAnimationFrame(reveal);
       });

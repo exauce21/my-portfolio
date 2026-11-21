@@ -842,6 +842,44 @@ body.menu-open { overflow: hidden; }
 .e404 h1 { font: italic 400 clamp(140px, 32vw, 520px)/.78 var(--f-serif); letter-spacing: -.04em; }
 
 /* 17. Animations & reveal ------------------------------------------------------ */
+
+/* Préchargeur (accueil) */
+.preloader {
+  --cols: 12;
+  --pc: calc((100vw - 2 * var(--gutter) - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  position: fixed; inset: 0; z-index: 300;
+  display: none;
+  background: var(--paper); color: var(--ink);
+  font-family: var(--f-mono); font-size: 12px; line-height: 1.2;
+  letter-spacing: -.02em; text-transform: uppercase;
+}
+html.is-preloading { overflow: hidden; }
+html.is-preloading .preloader { display: block; }
+.preloader__dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at center, rgba(15, 15, 15, .26) 1px, transparent 1.6px);
+  background-size: 26px 26px;
+  background-position: center center;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 55%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 70% at 50% 55%, #000 35%, transparent 100%);
+}
+.pre { position: absolute; margin: 0; }
+.pre__l { display: block; min-height: 1.2em; white-space: pre; }
+.pre--title { left: calc(var(--gutter) + 4 * (var(--pc) + var(--gap))); top: 22%; }
+.pre--init { left: calc(var(--gutter) + 4 * (var(--pc) + var(--gap))); top: 41.5%; }
+.pre--load { left: calc(var(--gutter) + 6 * (var(--pc) + var(--gap))); top: 48.6%; }
+.pre--count { left: calc(var(--gutter) + 3 * (var(--pc) + var(--gap))); top: 75%; }
+.pre--status { left: calc(var(--gutter) + 4 * (var(--pc) + var(--gap))); top: 75%; }
+.preloader__fx { position: fixed; inset: 0; z-index: 301; width: 100%; height: 100%; pointer-events: none; }
+@media (max-width: 1023px) {
+  .pre--title, .pre--init, .pre--status { left: var(--gutter); }
+  .pre--load { left: calc(var(--gutter) + 3 * (var(--pc) + var(--gap))); top: 56%; }
+  .pre--count { left: var(--gutter); top: 82%; }
+}
+@media (max-width: 639px) {
+  .preloader { font-size: 11px; }
+  .pre--load { left: calc(var(--gutter) + 1 * (var(--pc) + var(--gap))); }
+}
 .js [data-reveal] {
   opacity: 0; transform: translate3d(0, 28px, 0);
   transition: opacity 1.1s var(--ease), transform 1.2s var(--ease);
