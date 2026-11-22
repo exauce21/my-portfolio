@@ -214,6 +214,20 @@ h1, h2, h3, h4 { font-weight: 400; }
   transition: border-color .3s var(--ease);
 }
 a.nav__item:hover { border-bottom-color: #fff; }
+/* Survol : fond qui balaie de gauche à droite (sort par la droite), texte inversé.
+   Le header est en mix-blend-mode: difference → fond blanc + texte noir = bloc inversé. */
+a.nav__item { position: relative; }
+a.nav__item::after {
+  content: ''; position: absolute; z-index: -1;
+  inset: -6px -6px -1px -6px;
+  background: #fff;
+  transform: scaleX(0); transform-origin: right center;
+  transition: transform .5s var(--ease);
+  pointer-events: none;
+}
+a.nav__item:hover::after, a.nav__item:focus-visible::after { transform: scaleX(1); transform-origin: left center; }
+a.nav__item:hover, a.nav__item:focus-visible { color: #000; transition: color .2s var(--ease) .08s, border-color .3s var(--ease); }
+.nav__label { display: inline-block; white-space: pre; }
 .nav__item[aria-current="page"]::before,
 .nav__brand::before {
   content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none;

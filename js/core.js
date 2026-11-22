@@ -84,6 +84,51 @@
     });
   }
 
+  /* ---------- Navigation : texte brouillé au survol ----------
+     Les lettres défilent au hasard puis se fixent de gauche à droite
+     (400 ms, une nouvelle lettre toutes les 20 ms). */
+  var SCRAMBLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*+-=<>/?';
+  function initNavScramble() {
+    EY.$$('.site-header a.nav__item').forEach(function (link) {
+      var node = Array.prototype.slice.call(link.childNodes).filter(function (n) {
+        return n.nodeType === 3 && /\S/.test(n.nodeValue);
+      })[0];
+      if (!node) return;
+      var text = node.nodeValue.trim();
+      var label = document.createElement('span');
+      label.className = 'nav__label';
+      label.textContent = text;
+      link.replaceChild(label, node);
+      if (!canHover || reduceMotion) return;
+      link.setAttribute('aria-label', text);
+
+      var timer = null;
+      var DURATION = 400, TICK = 20;
+      function stop() {
+        clearInterval(timer); timer = null;
+        label.textContent = text;
+      }
+      function start() {
+        stop();
+        var n = text.length, t0 = performance.now();
+        var first = DURATION / 2, stagger = n > 1 ? (DURATION - first) / (n - 1) : 0;
+        timer = setInterval(function () {
+          var elapsed = performance.now() - t0, out = '';
+          for (var i = 0; i < n; i++) {
+            var c = text.charAt(i);
+            out += (c === ' ' || elapsed >= first + i * stagger) ? c : SCRAMBLE.charAt((Math.random() * SCRAMBLE.length) | 0);
+          }
+          label.textContent = out;
+          if (elapsed >= DURATION) stop();
+        }, TICK);
+      }
+      link.addEventListener('pointerenter', start);
+      link.addEventListener('focus', start);
+      link.addEventListener('pointerleave', stop);
+      link.addEventListener('blur', stop);
+    });
+  }
+
   /* ---------- Split des titres en mots ---------- */
   EY.split = function (el) {
     if (el.dataset.splitDone) return;
@@ -224,6 +269,7 @@
   function ready() {
     initClock();
     initMenu();
+    initNavScramble();
     initCopy();
     initCounts();
     initRecos();
