@@ -30,6 +30,7 @@
 
   var GLYPHS = '#$%&*@!?<>/\\_+=-:;01xX';
   var RAMP = ' .:-ixvcuznoabdq*#$&%B@';
+  var t = window.I18N ? window.I18N.t : function (s) { return s; };
   var wait = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
   var rand = function (s) { return s[(Math.random() * s.length) | 0]; };
 
@@ -166,7 +167,7 @@
       typed = true;
     })();
 
-    status.textContent = ':DÉMARRAGE';
+    status.textContent = t(':DÉMARRAGE');
 
     var t0 = performance.now(), val = 0;
     await new Promise(function (resolve) {
@@ -182,7 +183,7 @@
       })();
     });
 
-    await type(status, ':PRÊT À EXPLORER', 22);
+    await type(status, t(':PRÊT À EXPLORER'), 22);
     await wait(380);
 
     root.classList.remove('is-preloading');

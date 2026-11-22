@@ -10,6 +10,8 @@
      1. Déposer assets/img/web/<slug>-1.webp (+ -1-sm.webp), -2 …
      2. Ajouter une entrée avec kind: "web", url et images: <nombre>.
 
+   Traduction anglaise : ajouter le projet dans EN (plus bas, même slug).
+
    tags : "brand" (Brand identity), "ui" (Web design / UI), "dev" (Développement)
    ========================================================================== */
 
@@ -358,6 +360,201 @@ window.PORTFOLIO = (function () {
       deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Réseaux sociaux']
     }
   ];
+
+  /* ---------- Traductions anglaises (clé = slug) ----------
+     Seuls les champs listés remplacent le français quand la langue est EN.
+     Nouveau projet : ajouter son entrée ici (sinon il reste en français). */
+  var EN = {
+    tee: {
+      sector: 'Education — Canada',
+      summary: 'Identity, national website and interactive guide for the network that supports newly arrived families in Canada.',
+      description: [
+        'Visual identity for the Réseau National des Travailleuses et Travailleurs en Établissement dans les Écoles (RNTÉÉ), Canada’s national network of settlement workers in schools: a symbol inspired by the maple leaf and figures in motion, a bold red palette and a graphic system rolled out across print, signage and digital.',
+        'The collaboration continued with the design and development of the national website and the interactive guide for settlement workers.'
+      ],
+      deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Web design', 'Development']
+    },
+    samir: {
+      sector: 'Fintech — Mobile payments',
+      summary: 'A warm fintech brand for a simplified mobile payment solution.',
+      description: [
+        'Identity for Samir, a mobile payment solution: a fluid monogram that evokes the movement of money, the Filson Pro typeface and a green / orange pairing designed for screens.',
+        'The system was carried all the way into the product — app icon, interfaces, communication materials — with support in UI design and development.'
+      ],
+      deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development']
+    },
+    teenational: {
+      name: 'RNTÉÉ — National website',
+      sector: 'Education — Canada',
+      summary: 'The portal that guides families, free of charge, through their children’s school integration in Canada.',
+      description: [
+        'Website for the Réseau National TÉÉ: a portal that supports newly arrived families free of charge with school matters — understanding the system, finding a French-language school, contacting a local settlement worker.',
+        'Site structure, page design and WordPress build, in direct continuity with the new brand identity.'
+      ],
+      deliverables: ['Site structure', 'Web design', 'WordPress build', 'Search engine optimization']
+    },
+    'guide-tee': {
+      name: 'RNTÉÉ — Interactive guide',
+      sector: 'Education — Canada',
+      summary: 'An interactive tool to structure support for students with high needs.',
+      description: [
+        'Interactive guide for supporting students with high needs, written for settlement workers in schools: action sheets by situation, compasses by profile, a four-level intervention grid.',
+        'The challenge: make dense content immediately usable in the field, with navigation by starting point and a clear interface.'
+      ],
+      deliverables: ['UX & content architecture', 'UI design', 'Front-end development']
+    },
+    anasa: {
+      sector: 'Pilates & wellness',
+      summary: 'A minimal, sensory identity for a Pilates & wellness studio.',
+      description: [
+        'Identity for a Pilates & wellness studio: a refined monogram, a generously spaced logotype and an earth, sand and khaki palette.',
+        'The system lives on textiles, accessories, packaging and studio signage, then on the website, designed and developed in the same language.'
+      ],
+      deliverables: ['Monogram & logotype', 'Palette & typography', 'Merchandise & signage', 'Web design', 'Development']
+    },
+    lift: {
+      name: 'Lift Security',
+      client: 'Lift — Security solutions',
+      sector: 'Electronic security',
+      summary: 'A chevron symbol that combines protection and elevation.',
+      description: [
+        'Lift provides surveillance and electronic security solutions. The chevron-based symbol evokes both protection and elevation; the TT Hoves typeface and an electric blue create a brand that is technical yet approachable.',
+        'Stationery and social media applications, plus support in UI design and development.'
+      ],
+      deliverables: ['Symbol & logotype', 'Color system', 'Stationery', 'Social media', 'UI design', 'Development']
+    },
+    ci360: {
+      sector: 'Consulting',
+      summary: '“Your vision, our expertise” — an open, bright consulting brand.',
+      description: [
+        'Identity for a consulting firm: a circular, open monogram, the Area Normal typeface and a deep green / lime pairing that brings energy to an often austere sector.',
+        'The system extends from stationery to objects, all the way to the website designed and developed for the brand.'
+      ],
+      deliverables: ['Monogram & logotype', 'Construction grid', 'Stationery & objects', 'Web design', 'Development']
+    },
+    oxavents: {
+      sector: 'Events',
+      summary: 'A dot pattern as the signature of an events platform.',
+      description: [
+        'Oxavents helps companies and individuals design, organize and manage their events. Its dot-pattern symbol becomes a motif, carried by the Space Grotesk typeface and a black & white universe.',
+        'Merchandise applications — badges, apparel, caps, tote bags — plus support in UI design and development.'
+      ],
+      deliverables: ['Symbol & logotype', 'Typography', 'Merchandise', 'UI design', 'Development']
+    },
+    dfc: {
+      sector: 'Freelance community',
+      summary: 'A mascot and an electric blue checkerboard to bring a community together.',
+      description: [
+        'Identity for a community of digital freelancers: an expressive mascot, an electric blue checkerboard and the Neulis Neue typeface for a joyful, instantly recognizable brand.',
+        'Print materials, tote bags and social media, with support in UI design and development.'
+      ],
+      deliverables: ['Logotype & mascot', 'Pattern & colors', 'Stationery & goodies', 'UI design', 'Development']
+    },
+    davidbanga: {
+      sector: 'Photography — Dakar',
+      summary: 'A dark, editorial portfolio for a Dakar-based photographer.',
+      description: [
+        'Portfolio for photographer David Banga: a dark, editorial art direction that puts faces front and center, a gallery filterable by series — studio portraits, corporate, fashion, couples, weddings — and a session booking flow.'
+      ],
+      deliverables: ['Web art direction', 'UI design', 'Front-end development', 'Filterable gallery']
+    },
+    acquire: {
+      sector: 'Media — Training',
+      summary: 'Pin Africa’s journalism training initiative, told in one website.',
+      description: [
+        'Website for Pin Africa’s journalism training and media development initiative: online courses, field programs, impact figures, press coverage and partners, presented in a warm, accessible interface.'
+      ],
+      deliverables: ['UI design', 'Front-end development', 'Animations', 'Performance optimization']
+    },
+    'pin-africa': {
+      sector: 'Digital media',
+      summary: '“Stories that shape Africa” — the living archive of an African digital media outlet.',
+      description: [
+        'Website for Pin Africa, an African digital media outlet committed to independent journalism with an authentic voice. The site preserves its flagship work — video, mobile, interactive storytelling, articles — and tells the story of its mission.'
+      ],
+      deliverables: ['UI design', 'Front-end development', 'Search engine optimization']
+    },
+    kult: {
+      sector: 'HR — Tech',
+      summary: 'The mobile HR platform for frontline employees in French-speaking Africa.',
+      description: [
+        'Kult is the first mobile HR platform dedicated to frontline employees in French-speaking Africa. A two-tone “K” symbol, an ochre and midnight blue palette, a precise construction grid.',
+        'The system extends to the poster campaign, objects and packaging.'
+      ],
+      deliverables: ['Symbol & logotype', 'Construction grid', 'Poster campaign', 'Packaging & objects']
+    },
+    gsf: {
+      sector: 'Strategy consulting',
+      summary: 'A pixelated checkerboard for a strategy consulting firm.',
+      description: [
+        'Identity for a strategy consulting firm: a constructed “gsf” logotype, the Alvar Essential typeface and a red and blue pixelated checkerboard pattern that gives rhythm to editorial materials and social media.'
+      ],
+      deliverables: ['Logotype', 'Typography & colors', 'Graphic pattern', 'Social media kit']
+    },
+    skda: {
+      sector: 'Training',
+      summary: '“Unlock your potential” — an academy in vibrant colors.',
+      description: [
+        'Identity for Skills Development Academy: an interlaced symbol, the Sora typeface and a vibrant purple palette. The symbol’s fluid lines become a graphic language for campaigns, stationery and merchandise.'
+      ],
+      deliverables: ['Symbol & logotype', 'Palette & typography', 'Campaigns', 'Stationery & goodies']
+    },
+    etpp: {
+      sector: 'Construction',
+      summary: '“Building quality, brick by brick.”',
+      description: [
+        'Identity for a construction company: a dynamic symbol, a safety yellow-green paired with black, and applications designed for the job site — helmets, containers, signs — as well as stationery.'
+      ],
+      deliverables: ['Symbol & logotype', 'Colors', 'Job site applications', 'Stationery']
+    },
+    cifsa: {
+      sector: 'Sport',
+      summary: 'An energetic identity in support of women’s sport.',
+      description: [
+        'Identity for a sports organization: a geometric logotype, the TT Hoves typeface and an energetic red-orange palette, rolled out across campaigns that put women’s sport in the spotlight.'
+      ],
+      deliverables: ['Logotype', 'Typography & colors', 'Campaigns', 'Posters']
+    },
+    coraf: {
+      sector: 'Agricultural research',
+      summary: '“Driving innovation in West and Central Africa.”',
+      description: [
+        'Campaign and materials for CORAF (West and Central African Council for Agricultural Research and Development): large-format posters, publications and goodies around agricultural innovation.'
+      ],
+      deliverables: ['Campaign', 'Posters', 'Publications', 'Goodies']
+    },
+    mupho: {
+      sector: 'Art & culture',
+      summary: '“African Art, Global Impact” — posters and publications for the Museum of Photography.',
+      description: [
+        'For the Musée de la Photographie de Saint-Louis (Senegal), a series of posters and covers where the museum’s monogram becomes a window onto the works — around the “African Art, Global Impact” campaign and the “100 regards” publications.'
+      ],
+      deliverables: ['Posters', 'Covers', 'Campaign']
+    },
+    ric: {
+      sector: 'Non-profit network',
+      summary: 'A geometric logotype and a rhythmic pattern for a non-profit network.',
+      description: [
+        'Identity for the Réseau d’Influence Chrétiens: a geometric logotype, a royal blue and orange palette, and a rhythmic pattern rolled out across stationery, tote bags and event materials.'
+      ],
+      deliverables: ['Logotype', 'Construction grid', 'Palette', 'Stationery & goodies']
+    },
+    'proskill-it': {
+      sector: 'Tech training — Lomé',
+      summary: 'A two-tone “IT” monogram for a tech training center.',
+      description: [
+        'Identity for an intensive IT training center based in Lomé: a two-tone “IT” monogram, the Sora typeface and a blue / aqua green palette, rolled out across digital media and social networks.'
+      ],
+      deliverables: ['Monogram & logotype', 'Typography & colors', 'Social media']
+    }
+  };
+
+  if (window.I18N && window.I18N.lang === 'en') {
+    projects.forEach(function (p) {
+      var tr = EN[p.slug];
+      if (tr) for (var k in tr) p[k] = tr[k];
+    });
+  }
 
   /* Sélection affichée sur la page d'accueil */
   var featured = ['tee', 'samir', 'davidbanga', 'anasa', 'acquire', 'lift', 'kult', 'ci360'];

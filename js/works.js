@@ -137,7 +137,7 @@
     if (current === p) return;
     current = p;
     prev.classList.toggle('is-web', p.kind === 'web');
-    label.textContent = p.name + ' — ' + p.gallery.length + ' visuels';
+    label.textContent = EY.t(p.name + ' — ' + p.gallery.length + ' visuels');
     order = EY.shuffle(p.gallery.map(function (_, i) { return i; })); step = 0;
     var first = p.gallery[order[step++]].sm;
     lastSrc = first;

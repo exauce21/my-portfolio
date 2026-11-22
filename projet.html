@@ -23,6 +23,8 @@
   <link rel="preload" href="assets/fonts/libre-caslon-condensed-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('ey-lang');if(l==='en'){var d=document.documentElement;d.lang='en';d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},2500)}sessionStorage.removeItem('ey-lang-switch')}catch(e){}})();</script>
+  <script defer src="js/i18n.js"></script>
   <script defer src="js/data.js"></script>
   <script defer src="js/core.js"></script>
   <script defer src="js/works.js"></script>
@@ -38,7 +40,7 @@
       <a class="nav__item" href="index.html#services">Services</a>
       <a class="nav__item" href="index.html#a-propos">À propos</a>
       <a class="nav__item" href="#contact">Contact</a>
-      <span class="nav__item nav__clock">Paris&nbsp;—&nbsp;<span data-clock>--:--</span></span>
+      <div class="nav__item nav__lang lang-switch" role="group" aria-label="Langue"><button type="button" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button></div>
       <button class="nav__item nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu">Menu</button>
     </nav>
   </header>
@@ -54,7 +56,7 @@
     <div class="menu__foot mono">
       <a href="mailto:yexauce@gmail.com">yexauce@gmail.com</a>
       <a href="tel:+33611226373">+33 6 11 22 63 73</a>
-      <span class="muted">Paris — <span data-clock>--:--</span></span>
+      <div class="lang-switch" role="group" aria-label="Langue"><button type="button" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button><span aria-hidden="true">/</span><button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button></div>
     </div>
   </div>
 
