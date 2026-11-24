@@ -15,7 +15,7 @@
   function rowHTML(p) {
     return '' +
       '<li class="work" data-slug="' + p.slug + '" data-tags="' + p.tags.join(' ') + '">' +
-        '<a class="work__link" href="projet.html?p=' + encodeURIComponent(p.slug) + '">' +
+        '<a class="work__link" href="' + P.href(p) + '">' +
           '<span class="work__idx mono">' + p.number + '</span>' +
           '<span class="work__name">' + EY.esc(p.name) + '</span>' +
           '<span class="work__sector">' + EY.esc(p.sector) + (p.kind === 'web' ? ' <span class="mono muted">· Site web</span>' : '') + '</span>' +

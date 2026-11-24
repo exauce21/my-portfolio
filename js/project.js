@@ -12,6 +12,8 @@
   var slug = new URLSearchParams(window.location.search).get('p');
   var p = slug && P.bySlug(slug);
 
+  if (p && p.page) { window.location.replace(p.page); return; }
+
   if (!p) {
     document.title = EY.t('Projet introuvable — Exaucé Yanga');
     mount.innerHTML =
@@ -73,7 +75,7 @@
   if (p.related && p.related.length) {
     relatedHTML = '<section class="related container"><div class="label-row mono"><span>Projets liés</span><span>' + p.related.length + '</span></div>' +
       '<ol class="works__list" data-preview-host>' + p.related.map(P.bySlug).filter(Boolean).map(function (r) {
-        return '<li class="work" data-slug="' + r.slug + '"><a class="work__link" href="projet.html?p=' + r.slug + '">' +
+        return '<li class="work" data-slug="' + r.slug + '"><a class="work__link" href="' + P.href(r) + '">' +
           '<span class="work__idx mono">' + r.number + '</span><span class="work__name">' + EY.esc(r.name) + '</span>' +
           '<span class="work__sector">' + EY.esc(r.sector) + '</span>' + EY.tagsHTML(r.tags) +
           '<svg class="work__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 4.5 11.5 11.5M11.5 5.5v6h-6" stroke="currentColor" stroke-width="1.2"/></svg></a></li>';
@@ -110,7 +112,7 @@
     '</section>' +
     relatedHTML +
     '<section class="container">' +
-      '<a class="next" href="projet.html?p=' + next.slug + '" data-slug="' + next.slug + '" data-preview-host>' +
+      '<a class="next" href="' + P.href(next) + '" data-slug="' + next.slug + '" data-preview-host>' +
         '<span class="next__row mono"><span>Projet suivant</span><span>' + next.number + '</span></span>' +
         '<span class="next__name">' + EY.esc(next.name) + ' <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1"/></svg></span>' +
       '</a>' +

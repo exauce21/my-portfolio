@@ -57,6 +57,56 @@ window.PORTFOLIO = (function () {
       related: ['teenational', 'guide-tee']
     },
     {
+      slug: 'sephis',
+      kind: 'brand',
+      page: 'sephis.html',
+      name: 'Fondation Sephis — WAWI',
+      client: 'Fondation SEPHIS',
+      sector: 'Entrepreneuriat féminin — Sénégal',
+      tags: ['brand'],
+      summary: 'Identités visuelles et packagings pour 50 femmes entrepreneures sénégalaises du programme WAWI.',
+      description: [
+        'Dans le cadre du programme WAWI (West African Women Initiative) de la Fondation SEPHIS, j’ai accompagné en tant que consultant 50 femmes entrepreneures sénégalaises, issues des cohortes 1 à 6, dans la création ou la refonte de leur identité visuelle et la normalisation de leurs packagings.',
+        'Diagnostics, logos, palettes, typographies, cartes de visite, templates pour les réseaux sociaux et emballages conformes aux normes : des marques professionnelles, prêtes pour les marchés formels et l’accès au financement.'
+      ],
+      deliverables: ['Diagnostics', 'Logos & chartes graphiques', 'Packaging', 'Templates réseaux sociaux', 'Supports print'],
+      /* Page dédiée : sephis.html. Visuels dans assets/img/projets/sephis/<marque>/ */
+      collection: [
+        { slug: 'saveur-marine', name: 'Saveurs Marines', sector: 'Produits de la mer', images: 10 },
+        { slug: 'corine', name: 'Corinne Cake', sector: 'Pâtisserie', images: 9 },
+        { slug: 'tpm', name: 'TPM — Touba Pikine Matériaux', sector: 'Matériaux de construction', images: 8 },
+        { slug: 'touta', name: 'Touta', sector: '', images: 8 },
+        { slug: 'binaf', name: 'Maison Binaf', sector: '', images: 8 },
+        { slug: 'amoz', name: 'AMOZ', sector: '', images: 8 },
+        { slug: 'rara-fish', name: 'Rara Fish', sector: 'Produits de la mer', images: 6 },
+        { slug: 'mtb', name: 'MTB', sector: 'BTP — Construction', images: 6 }
+      ],
+      /* Logos : assets/img/projets/sephis/logos/<fichier>.webp */
+      logos: [
+        { file: 'saveur-marine', name: 'Saveurs Marines' },
+        { file: 'corine-cake', name: 'Corinne Cake Dakar' },
+        { file: 'tpm', name: 'TPM' },
+        { file: 'touta', name: 'Touta' },
+        { file: 'amoz', name: 'AMOZ' },
+        { file: 'rara-fish', name: 'Rara Fish' },
+        { file: 'mtb', name: 'MTB' },
+        { file: 'mds', name: 'MDS Seniors' },
+        { file: 'mandabio', name: 'MandaBio' },
+        { file: 'senegalette', name: 'Sénégalette' },
+        { file: 'oresto', name: 'O’Resto' },
+        { file: 'rizmis', name: 'Rizmis' },
+        { file: 'etou', name: 'Etou' },
+        { file: 'setna', name: 'Sétna' },
+        { file: 'nhs', name: 'NHS' },
+        { file: 'pro-medicalys', name: 'ProMedicalys' },
+        { file: 'moonapads', name: 'Moonapads' },
+        { file: 'fazah', name: 'Fazah Global Holding' },
+        { file: 'agro-immo', name: 'Agro-Immo' },
+        { file: 'matagrhy', name: 'MatAgrHy' },
+        { file: 'waddam', name: 'Waddam' }
+      ]
+    },
+    {
       slug: 'samir',
       kind: 'brand',
       name: 'Samir',
@@ -374,6 +424,16 @@ window.PORTFOLIO = (function () {
       ],
       deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Web design', 'Development']
     },
+    sephis: {
+      name: 'Sephis Foundation — WAWI',
+      sector: 'Women’s entrepreneurship — Senegal',
+      summary: 'Visual identities and packaging for 50 Senegalese women entrepreneurs in the WAWI program.',
+      description: [
+        'As part of the SEPHIS Foundation’s WAWI program (West African Women Initiative), I worked as a consultant with 50 Senegalese women entrepreneurs, from cohorts 1 to 6, to create or redesign their visual identity and bring their packaging up to standard.',
+        'Diagnostics, logos, palettes, typography, business cards, social media templates and standards-compliant packaging: professional brands, ready for formal markets and access to financing.'
+      ],
+      deliverables: ['Diagnostics', 'Logos & brand guidelines', 'Packaging', 'Social media templates', 'Print materials']
+    },
     samir: {
       sector: 'Fintech — Mobile payments',
       summary: 'A warm fintech brand for a simplified mobile payment solution.',
@@ -557,7 +617,7 @@ window.PORTFOLIO = (function () {
   }
 
   /* Sélection affichée sur la page d'accueil */
-  var featured = ['tee', 'samir', 'davidbanga', 'anasa', 'acquire', 'lift', 'kult', 'ci360'];
+  var featured = ['tee', 'sephis', 'samir', 'davidbanga', 'anasa', 'acquire', 'lift', 'kult', 'ci360'];
 
   /* ---------- Helpers ---------- */
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -566,7 +626,22 @@ window.PORTFOLIO = (function () {
     p.index = i + 1;
     p.number = 'N°' + pad(i + 1);
     p.gallery = [];
-    for (var k = 1; k <= p.images; k++) {
+    /* Projet "collection" (ex. Sephis) : 2 visuels par marque pour les aperçus */
+    if (p.collection) {
+      p.collection.forEach(function (b) {
+        b.gallery = [];
+        for (var j = 1; j <= b.images; j++) {
+          b.gallery.push({
+            lg: 'assets/img/projets/' + p.slug + '/' + b.slug + '/' + pad(j) + '.webp',
+            sm: 'assets/img/projets/' + p.slug + '/' + b.slug + '/' + pad(j) + '-sm.webp',
+            w: 1050, h: 1400
+          });
+        }
+        [1, 3].forEach(function (j) { if (b.gallery[j]) p.gallery.push(b.gallery[j]); });
+      });
+      p.images = p.gallery.length;
+    }
+    for (var k = 1; k <= (p.collection ? 0 : p.images); k++) {
       if (p.kind === 'web') {
         p.gallery.push({
           lg: 'assets/img/web/' + p.slug + '-' + k + '.webp',
@@ -589,6 +664,9 @@ window.PORTFOLIO = (function () {
     return null;
   }
 
+  /* Lien vers la page du projet (page dédiée si définie) */
+  function href(p) { return p.page || ('projet.html?p=' + encodeURIComponent(p.slug)); }
+
   function count(tag) {
     if (!tag || tag === 'all') return projects.length;
     return projects.filter(function (p) { return p.tags.indexOf(tag) > -1; }).length;
@@ -600,6 +678,7 @@ window.PORTFOLIO = (function () {
     featured: featured,
     TAG_LABELS: TAG_LABELS,
     bySlug: bySlug,
+    href: href,
     count: count
   };
 })();
