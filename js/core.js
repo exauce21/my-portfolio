@@ -213,7 +213,7 @@
       brand: P.count('brand'),
       ui: P.count('ui'),
       dev: P.count('dev'),
-      web: P.projects.filter(function (p) { return p.kind === 'web'; }).length
+      web: P.projects.filter(function (p) { return p.kind === 'web' || !!p.sites; }).length
     };
     EY.$$('[data-count]').forEach(function (el) {
       var v = map[el.getAttribute('data-count')];

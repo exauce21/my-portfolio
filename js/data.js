@@ -47,14 +47,20 @@ window.PORTFOLIO = (function () {
       summary: 'Identité, site national et guide interactif pour le réseau qui accompagne les familles nouvellement arrivées au Canada.',
       description: [
         'Identité visuelle du Réseau National des Travailleuses et Travailleurs en Établissement dans les Écoles (RNTÉÉ) : un symbole inspiré de la feuille d’érable et des silhouettes en mouvement, une palette rouge affirmée et un système graphique décliné sur le print, la signalétique et le digital.',
-        'L’accompagnement s’est prolongé avec le design et le développement du site national et du guide interactif destiné aux TÉÉ.'
+        'Site national : un portail WordPress qui accompagne gratuitement les familles nouvellement arrivées dans leurs démarches scolaires — découvrir le système, trouver une école francophone, contacter un TÉÉ local — dans la continuité directe de la nouvelle identité.',
+        'Guide interactif : un outil pour structurer l’accompagnement des élèves à besoins élevés — fiches d’action par situation, boussoles par profil, grille d’intervention en quatre niveaux — pensé pour rendre un contenu dense immédiatement utilisable sur le terrain.'
       ],
-      deliverables: ['Logotype & symbole', 'Système graphique', 'Supports print & signalétique', 'Web design', 'Développement'],
+      deliverables: ['Logotype & symbole', 'Système graphique', 'Supports print & signalétique', 'Arborescence & UX', 'Web design', 'Intégration WordPress', 'Développement front-end', 'Référencement naturel'],
+      stack: ['WordPress', 'Elementor', 'HTML / CSS / JavaScript', 'SEO'],
       links: [
         { label: 'teenational.ca', url: 'https://teenational.ca/' },
         { label: 'guide.teenational.ca', url: 'https://guide.teenational.ca/' }
       ],
-      related: ['teenational', 'guide-tee']
+      /* Sites réalisés : captures dans assets/img/web/<slug>-<n>.webp */
+      sites: [
+        { slug: 'teenational', label: 'Site national', images: 2 },
+        { slug: 'guide-tee', label: 'Guide interactif', images: 2 }
+      ]
     },
     {
       slug: 'sephis',
@@ -120,42 +126,6 @@ window.PORTFOLIO = (function () {
         'Le système a été décliné jusqu’au produit — icône d’application, interfaces, supports de communication — avec un accompagnement en UI design et en développement.'
       ],
       deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Icône d’application', 'UI design', 'Développement']
-    },
-    {
-      slug: 'teenational',
-      kind: 'web',
-      name: 'RNTÉÉ — Site national',
-      client: 'Réseau National TÉÉ',
-      sector: 'Éducation — Canada',
-      tags: ['ui', 'dev'],
-      images: 2,
-      url: 'https://teenational.ca/',
-      stack: ['WordPress', 'Elementor', 'SEO'],
-      summary: 'Le portail qui guide gratuitement les familles dans l’intégration scolaire de leurs enfants au Canada.',
-      description: [
-        'Site du Réseau National TÉÉ : un portail qui accompagne gratuitement les familles nouvellement arrivées dans leurs démarches scolaires — découvrir le système, trouver une école francophone, contacter un TÉÉ local.',
-        'Arborescence, design des pages et intégration WordPress, dans la continuité directe de la nouvelle identité de marque.'
-      ],
-      deliverables: ['Arborescence', 'Web design', 'Intégration WordPress', 'Référencement naturel'],
-      related: ['tee', 'guide-tee']
-    },
-    {
-      slug: 'guide-tee',
-      kind: 'web',
-      name: 'RNTÉÉ — Guide interactif',
-      client: 'Réseau National TÉÉ',
-      sector: 'Éducation — Canada',
-      tags: ['ui', 'dev'],
-      images: 2,
-      url: 'https://guide.teenational.ca/',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-      summary: 'Un outil interactif pour structurer l’accompagnement des élèves à besoins élevés.',
-      description: [
-        'Guide interactif d’accompagnement des élèves à besoins élevés, à l’intention des travailleuses et travailleurs d’établissement dans les écoles : fiches d’action par situation, boussoles par profil, grille d’intervention en quatre niveaux.',
-        'L’enjeu : rendre un contenu dense immédiatement utilisable sur le terrain, avec une navigation par point de départ et une interface claire.'
-      ],
-      deliverables: ['UX & architecture de contenu', 'UI design', 'Développement front-end'],
-      related: ['tee', 'teenational']
     },
     {
       slug: 'anasa',
@@ -420,9 +390,10 @@ window.PORTFOLIO = (function () {
       summary: 'Identity, national website and interactive guide for the network that supports newly arrived families in Canada.',
       description: [
         'Visual identity for the Réseau National des Travailleuses et Travailleurs en Établissement dans les Écoles (RNTÉÉ), Canada’s national network of settlement workers in schools: a symbol inspired by the maple leaf and figures in motion, a bold red palette and a graphic system rolled out across print, signage and digital.',
-        'The collaboration continued with the design and development of the national website and the interactive guide for settlement workers.'
+        'National website: a WordPress portal that supports newly arrived families free of charge with school matters — understanding the system, finding a French-language school, contacting a local settlement worker — in direct continuity with the new identity.',
+        'Interactive guide: a tool to structure support for students with high needs — action sheets by situation, compasses by profile, a four-level intervention grid — designed to make dense content immediately usable in the field.'
       ],
-      deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Web design', 'Development']
+      deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Site structure & UX', 'Web design', 'WordPress build', 'Front-end development', 'Search engine optimization']
     },
     sephis: {
       name: 'Sephis Foundation — WAWI',
@@ -442,26 +413,6 @@ window.PORTFOLIO = (function () {
         'The system was carried all the way into the product — app icon, interfaces, communication materials — with support in UI design and development.'
       ],
       deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development']
-    },
-    teenational: {
-      name: 'RNTÉÉ — National website',
-      sector: 'Education — Canada',
-      summary: 'The portal that guides families, free of charge, through their children’s school integration in Canada.',
-      description: [
-        'Website for the Réseau National TÉÉ: a portal that supports newly arrived families free of charge with school matters — understanding the system, finding a French-language school, contacting a local settlement worker.',
-        'Site structure, page design and WordPress build, in direct continuity with the new brand identity.'
-      ],
-      deliverables: ['Site structure', 'Web design', 'WordPress build', 'Search engine optimization']
-    },
-    'guide-tee': {
-      name: 'RNTÉÉ — Interactive guide',
-      sector: 'Education — Canada',
-      summary: 'An interactive tool to structure support for students with high needs.',
-      description: [
-        'Interactive guide for supporting students with high needs, written for settlement workers in schools: action sheets by situation, compasses by profile, a four-level intervention grid.',
-        'The challenge: make dense content immediately usable in the field, with navigation by starting point and a clear interface.'
-      ],
-      deliverables: ['UX & content architecture', 'UI design', 'Front-end development']
     },
     anasa: {
       sector: 'Pilates & wellness',
@@ -656,10 +607,26 @@ window.PORTFOLIO = (function () {
         });
       }
     }
+    /* Captures des sites réalisés (projet fusionné, ex. RNTÉÉ) */
+    if (p.sites) {
+      p.sites.forEach(function (site) {
+        for (var m = 1; m <= site.images; m++) {
+          p.gallery.push({
+            lg: 'assets/img/web/' + site.slug + '-' + m + '.webp',
+            sm: 'assets/img/web/' + site.slug + '-' + m + '-sm.webp',
+            w: 1440, h: 900, web: true, label: site.label
+          });
+        }
+      });
+    }
     p.cover = p.gallery[0];
   });
 
+  /* Anciennes adresses de projets fusionnés */
+  var ALIASES = { teenational: 'tee', 'guide-tee': 'tee' };
+
   function bySlug(slug) {
+    if (ALIASES[slug]) slug = ALIASES[slug];
     for (var i = 0; i < projects.length; i++) if (projects[i].slug === slug) return projects[i];
     return null;
   }

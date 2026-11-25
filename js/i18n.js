@@ -150,6 +150,8 @@
     'Guide interactif RNTÉÉ': 'RNTÉÉ interactive guide',
     'RNTÉÉ — Guide interactif': 'RNTÉÉ — Interactive guide',
     'Site Pin Africa': 'Pin Africa website',
+    'Site national': 'National website',
+    'Guide interactif': 'Interactive guide',
 
     /* Clients */
     '17 marques': '17 brands',

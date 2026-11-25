@@ -49,7 +49,7 @@
     /* all : tout — brand : identités — ui : projets UI & Dev — web : sites web */
     var match = function (p, f) {
       if (f === 'all') return true;
-      if (f === 'web') return p.kind === 'web';
+      if (f === 'web') return p.kind === 'web' || !!p.sites;
       return p.tags.indexOf(f) > -1;
     };
     var apply = function (tag, push) {
