@@ -79,7 +79,7 @@ window.PORTFOLIO = (function () {
         { slug: 'binaf', name: 'Maison Binaf', sector: '', images: 8 },
         { slug: 'amoz', name: 'AMOZ', sector: '', images: 8 },
         { slug: 'rara-fish', name: 'Rara Fish', sector: 'Produits de la mer', images: 6 },
-        { slug: 'mtb', name: 'MTB', sector: 'BTP — Construction', images: 6 }
+        { slug: 'mtb', name: 'MTB', sector: 'BTP — Construction', images: 7 }
       ],
       /* Logos : assets/img/projets/sephis/logos/<fichier>.webp */
       logos: [
