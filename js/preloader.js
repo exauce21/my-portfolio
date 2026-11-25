@@ -1,7 +1,7 @@
 /* ==========================================================================
-   preloader.js — écran de chargement de la page d'accueil
+   preloader.js - écran de chargement de la page d'accueil
    1. Les lignes s'écrivent une à une (caractères brouillés en tête)
-   2. Le compteur [000 — 100] suit le chargement réel (polices, page, portrait)
+   2. Le compteur [000 - 100] suit le chargement réel (polices, page, portrait)
    3. Statut « PRÊT À EXPLORER », puis dissolution en grille ASCII
    Expose EY.preloader : promesse résolue au début de la dissolution,
    utilisée par core.js pour lancer l'entrée du hero.

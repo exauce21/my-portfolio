@@ -1,5 +1,5 @@
 /* ==========================================================================
-   hero.js — Hero interactif
+   hero.js - Hero interactif
    Au passage de la souris, les visuels des projets apparaissent en traînée
    (derrière le portrait, devant le nom). Sur écran tactile : apparition
    ambiante + au toucher. Léger effet de profondeur (parallaxe) sur le nom

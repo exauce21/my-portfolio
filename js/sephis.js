@@ -1,5 +1,5 @@
 /* ==========================================================================
-   sephis.js — Page mission Fondation Sephis (sephis.html)
+   sephis.js - Page mission Fondation Sephis (sephis.html)
    Rendu depuis data.js (projet "sephis") :
    - identités réalisées (collection) + lightbox par marque
    - grille des logos conçus
@@ -28,12 +28,12 @@
       var thumbs = b.gallery.map(function (g, i) {
         return '<figure class="gallery__item sephis-brand__item" data-brand="' + bi + '" data-i="' + i + '">' +
           '<button type="button" class="sr-only">' + EY.esc(t('Agrandir le visuel ' + (i + 1))) + '</button>' +
-          '<img src="' + g.sm + '" alt="' + EY.esc(t(b.name + ' — visuel ' + (i + 1) + ' sur ' + b.gallery.length)) + '" width="480" height="640" loading="lazy" decoding="async">' +
+          '<img src="' + g.sm + '" alt="' + EY.esc(t(b.name + ' - visuel ' + (i + 1) + ' sur ' + b.gallery.length)) + '" width="480" height="640" loading="lazy" decoding="async">' +
         '</figure>';
       }).join('');
       return '<article class="sephis-brand grid">' +
         '<header class="sephis-brand__info" data-reveal>' +
-          '<span class="mono muted">B—' + pad(bi + 1) + '</span>' +
+          '<span class="mono muted">B-' + pad(bi + 1) + '</span>' +
           '<h3 class="sephis-brand__name">' + EY.esc(b.name) + '</h3>' +
           '<p class="mono muted">' + (b.sector ? '<span>' + EY.esc(t(b.sector)) + '</span><br>' : '') +
             '<span>' + EY.esc(t('Identité visuelle')) + '</span> · <span>' + EY.esc(t(b.gallery.length + ' visuels')) + '</span></p>' +
@@ -81,7 +81,7 @@
   function render() {
     var g = brand.gallery[cur];
     img.src = g.lg; img.width = g.w; img.height = g.h;
-    img.alt = t(brand.name + ' — visuel ' + (cur + 1));
+    img.alt = t(brand.name + ' - visuel ' + (cur + 1));
     counter.textContent = (cur + 1) + ' / ' + brand.gallery.length;
     titleEl.textContent = brand.name;
   }

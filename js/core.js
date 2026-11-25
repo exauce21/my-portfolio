@@ -1,5 +1,5 @@
 /* ==========================================================================
-   core.js — comportements communs à toutes les pages
+   core.js - comportements communs à toutes les pages
    (horloge, menu mobile, reveal au scroll, split de titres, copie d'email)
    ========================================================================== */
 (function () {

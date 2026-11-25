@@ -1,5 +1,5 @@
 /* ==========================================================================
-   project.js — Page étude de cas (projet.html?p=<slug>)
+   project.js - Page étude de cas (projet.html?p=<slug>)
    Rendu depuis data.js + galerie + lightbox + projet suivant.
    ========================================================================== */
 (function () {
@@ -15,10 +15,10 @@
   if (p && p.page) { window.location.replace(p.page); return; }
 
   if (!p) {
-    document.title = EY.t('Projet introuvable — Exaucé Yanga');
+    document.title = EY.t('Projet introuvable - Exaucé Yanga');
     mount.innerHTML =
       '<section class="container notfound">' +
-        '<p class="mono muted">Erreur — projet introuvable</p>' +
+        '<p class="mono muted">Erreur - projet introuvable</p>' +
         '<h1 class="case-hero__title">Ce projet n’existe pas <em>(encore)</em>.</h1>' +
         '<p style="margin-top:32px"><a class="btn" href="projets.html">Voir tous les projets ' + EY.icon.arrow + '</a></p>' +
       '</section>';
@@ -27,7 +27,7 @@
   }
 
   /* ---------- SEO / partage ---------- */
-  var title = p.name + ' — ' + (p.kind === 'web' ? EY.t('Site web') : 'Brand identity') + ' · Exaucé Yanga';
+  var title = p.name + ' - ' + (p.kind === 'web' ? EY.t('Site web') : 'Brand identity') + ' · Exaucé Yanga';
   document.title = title;
   var setMeta = function (sel, val) { var m = document.querySelector(sel); if (m) m.setAttribute('content', val); };
   setMeta('meta[name="description"]', p.summary);
@@ -66,8 +66,8 @@
   function itemHTML(g, i) {
     return '<figure class="gallery__item' + (spans[i] && !g.web ? ' gallery__item--' + spans[i] : '') + '" data-reveal style="--d:' + (i % 3) * 80 + '">' +
       '<button type="button" class="sr-only">Agrandir le visuel ' + (i + 1) + '</button>' +
-      '<img src="' + g.lg + '" alt="' + EY.esc(p.name) + ' — visuel ' + (i + 1) + ' sur ' + p.gallery.length + '" width="' + g.w + '" height="' + g.h + '" loading="' + (i < 3 ? 'eager' : 'lazy') + '" decoding="async">' +
-      '<figcaption class="mono">' + (g.label ? EY.esc(EY.t(g.label)) + ' — ' : '') + (i + 1 < 10 ? '0' : '') + (i + 1) + ' / ' + (p.gallery.length < 10 ? '0' : '') + p.gallery.length + '</figcaption>' +
+      '<img src="' + g.lg + '" alt="' + EY.esc(p.name) + ' - visuel ' + (i + 1) + ' sur ' + p.gallery.length + '" width="' + g.w + '" height="' + g.h + '" loading="' + (i < 3 ? 'eager' : 'lazy') + '" decoding="async">' +
+      '<figcaption class="mono">' + (g.label ? EY.esc(EY.t(g.label)) + ' - ' : '') + (i + 1 < 10 ? '0' : '') + (i + 1) + ' / ' + (p.gallery.length < 10 ? '0' : '') + p.gallery.length + '</figcaption>' +
     '</figure>';
   }
   /* Visuels de marque (grille 3 colonnes), puis captures de sites en pleine largeur */
@@ -101,7 +101,7 @@
           '<div class="mono muted" style="margin-top:10px">' + p.tags.map(function (t) { return EY.t(scopeLabels[t] || L[t]); }).join(' · ') + '</div></div>' +
         (linksHTML
           ? '<div class="case-meta__cell"><span class="mono muted">En ligne</span><div>' + linksHTML + '</div>' + stackHTML + '</div>'
-          : '<div class="case-meta__cell"><span class="mono muted">Format</span><div>Étude de cas — ' + p.gallery.length + ' visuels</div></div>') +
+          : '<div class="case-meta__cell"><span class="mono muted">Format</span><div>Étude de cas - ' + p.gallery.length + ' visuels</div></div>') +
       '</div>' +
     '</header>' +
     '<section class="container">' +
@@ -138,7 +138,7 @@
   function render() {
     var g = p.gallery[cur];
     img.src = g.lg; img.width = g.w; img.height = g.h;
-    img.alt = EY.t(p.name + ' — visuel ' + (cur + 1));
+    img.alt = EY.t(p.name + ' - visuel ' + (cur + 1));
     counter.textContent = (cur + 1) + ' / ' + p.gallery.length;
   }
   function open(i) { cur = i; render(); dlg.showModal(); document.body.style.overflow = 'hidden'; }

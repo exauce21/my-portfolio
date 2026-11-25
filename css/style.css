@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Exaucé Yanga — Portfolio
+   Exaucé Yanga - Portfolio
    style.css
 
    01. Fonts
@@ -22,7 +22,7 @@
    18. Responsive
    ========================================================================== */
 
-/* 01. Fonts — auto-hébergées (pas d'appel à Google Fonts) ------------------ */
+/* 01. Fonts - auto-hébergées (pas d'appel à Google Fonts) ------------------ */
 @font-face {
   font-family: 'Libre Caslon Condensed';
   src: url('../assets/fonts/libre-caslon-condensed-latin-400-normal.woff2') format('woff2');
@@ -185,7 +185,7 @@ h1, h2, h3, h4 { font-weight: 400; }
 .cross::before { left: 6px; top: 0; width: 1px; height: 13px; }
 .cross::after { top: 6px; left: 0; height: 1px; width: 13px; }
 
-/* Ligne d'étiquette de section : (01) — À propos ............ Index */
+/* Ligne d'étiquette de section : (01) - À propos ............ Index */
 .label-row {
   display: flex; justify-content: space-between; align-items: baseline; gap: var(--gap);
   padding-top: 10px; border-top: 1px solid var(--rule-strong);
