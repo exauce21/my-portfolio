@@ -53,16 +53,8 @@
   var stackHTML = p.stack ? '<div class="mono muted" style="margin-top:10px">' + p.stack.map(EY.esc).join(' · ') + '</div>' : '';
 
   /* ---------- Galerie ---------- */
-  /* Mise en page sans orphelin (grille 3 colonnes, 1er visuel en 2x2) :
-     on ajoute des visuels "larges" (2 colonnes) pour compléter les rangées. */
-  var brandItems = p.gallery.filter(function (g) { return !g.web; });
-  var n = brandItems.length, spans = {};
-  if (!isWeb && n > 2) {
-    spans[0] = 'big';
-    var r = (n + 3) % 3;
-    if (r === 2) spans[n - 1] = 'wide';
-    if (r === 1 && n >= 6) { spans[n - 4] = 'wide'; spans[n - 1] = 'wide'; }
-  }
+  /* Les visuels ne sont jamais recadrés (proportions d'origine) : grille de 3 colonnes. */
+  var spans = {}, cols = 3;
   function itemHTML(g, i) {
     return '<figure class="gallery__item' + (spans[i] && !g.web ? ' gallery__item--' + spans[i] : '') + '" data-reveal style="--d:' + (i % 3) * 80 + '">' +
       '<button type="button" class="sr-only">Agrandir le visuel ' + (i + 1) + '</button>' +
@@ -111,7 +103,7 @@
         '<div class="case-body__list" data-reveal style="--d:200"><p class="mono muted" style="margin-bottom:12px">Livrables</p><ul>' +
           p.deliverables.map(function (d) { return '<li>' + EY.esc(d) + '</li>'; }).join('') + '</ul></div>' +
       '</div>' +
-      (galleryHTML ? '<div class="gallery' + (isWeb ? ' gallery--web' : '') + '">' + galleryHTML + '</div>' : '') +
+      (galleryHTML ? '<div class="gallery' + (isWeb ? ' gallery--web' : '') + (cols === 2 ? ' gallery--2' : '') + '">' + galleryHTML + '</div>' : '') +
       (sitesHTML ? '<div class="gallery gallery--web">' + sitesHTML + '</div>' : '') +
       (isWeb ? '<p style="margin-top:24px"><a class="btn" href="' + p.url + '" target="_blank" rel="noopener">Visiter le site ' + EY.icon.out + '</a></p>' : '') +
     '</section>' +

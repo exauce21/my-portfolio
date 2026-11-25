@@ -123,9 +123,13 @@ window.PORTFOLIO = (function () {
       summary: 'Une marque fintech chaleureuse pour une solution d’encaissement mobile simplifiée.',
       description: [
         'Identité de Samir, solution d’encaissement mobile : un monogramme fluide qui évoque le mouvement de l’argent, la typographie Filson Pro et un duo vert / orange pensé pour l’écran.',
-        'Le système a été décliné jusqu’au produit (icône d’application, interfaces, supports de communication), avec un accompagnement en UI design et en développement.'
+        'Le système a été décliné jusqu’au produit (icône d’application, interfaces, supports de communication), avec un accompagnement en UI design et en développement.',
+        'J’accompagne aussi la marque dans la création de ses visuels pour les réseaux sociaux.'
       ],
-      deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Icône d’application', 'UI design', 'Développement']
+      deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Icône d’application', 'UI design', 'Développement', 'Visuels réseaux sociaux'],
+      links: [
+        { label: 'Visuels réseaux sociaux (Pinterest)', url: 'https://fr.pinterest.com/yangaexauce/media-posts/samir/' }
+      ]
     },
     {
       slug: 'anasa',
@@ -410,9 +414,10 @@ window.PORTFOLIO = (function () {
       summary: 'A warm fintech brand for a simplified mobile payment solution.',
       description: [
         'Identity for Samir, a mobile payment solution: a fluid monogram that evokes the movement of money, the Filson Pro typeface and a green / orange pairing designed for screens.',
-        'The system was carried all the way into the product (app icon, interfaces, communication materials), with support in UI design and development.'
+        'The system was carried all the way into the product (app icon, interfaces, communication materials), with support in UI design and development.',
+        'I also support the brand in creating its social media visuals.'
       ],
-      deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development']
+      deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development', 'Social media visuals']
     },
     anasa: {
       sector: 'Pilates & wellness',

@@ -151,6 +151,7 @@
     'RNTÉÉ - Guide interactif': 'RNTÉÉ - Interactive guide',
     'Site Pin Africa': 'Pin Africa website',
     'Site national': 'National website',
+    'Visuels réseaux sociaux (Pinterest)': 'Social media visuals (Pinterest)',
     'Guide interactif': 'Interactive guide',
 
     /* Clients */
