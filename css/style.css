@@ -267,7 +267,6 @@ body.menu-open { overflow: hidden; }
   min-height: 620px;
   overflow: hidden;
   isolation: isolate;
-  cursor: crosshair;
 }
 .hero__dots {
   position: absolute; inset: 0; z-index: -1;
@@ -668,6 +667,20 @@ body.menu-open { overflow: hidden; }
 .reco__li { display: inline-flex; align-items: center; gap: 6px; }
 
 /* 13. Contact / footer ------------------------------------------------------- */
+/* Curseur au logo « ey » : en-têtes de pages (fond clair) et contact (fond sombre).
+   Liens et boutons gardent la main habituelle. Point actif au centre du logo. */
+@media (hover: hover) and (pointer: fine) {
+  .hero, .page-hero, .case-hero, .e404 { cursor: url("../assets/img/cursor-ey.svg") 32 32, auto; }
+  .contact { cursor: url("../assets/img/cursor-ey-light.svg") 32 32, auto; }
+}
+.cursor-trail {
+  position: fixed; left: 0; top: 0; z-index: 58;
+  width: 64px; height: 64px; opacity: 0;
+  background: url("../assets/img/cursor-ey.svg") center / contain no-repeat;
+  pointer-events: none; will-change: transform, opacity;
+}
+.cursor-trail--light { background-image: url("../assets/img/cursor-ey-light.svg"); }
+
 .contact {
   margin-top: var(--section-pad);
   background: var(--ink); color: var(--paper);
