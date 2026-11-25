@@ -801,6 +801,8 @@ body.menu-open { overflow: hidden; }
   transition: opacity .4s var(--ease);
 }
 .gallery__item:hover img { opacity: .92; }
+/* Grille collée : chaque image déborde d’1px sur sa voisine pour masquer les jointures dues aux demi-pixels */
+.gallery:not(.gallery--web) .gallery__item img { width: calc(100% + 1px); max-width: none; margin-bottom: -1px; }
 .gallery__item figcaption {
   position: absolute; left: 10px; bottom: 10px;
   background: var(--paper); padding: 4px 7px 3px;
