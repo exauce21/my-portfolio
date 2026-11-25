@@ -159,7 +159,10 @@ window.PORTFOLIO = (function () {
         'Lift propose des solutions de surveillance et de sécurité électronique. Le symbole, construit en chevrons, évoque à la fois la protection et l’élévation ; la typographie TT Hoves et un bleu électrique installent une marque technique mais accessible.',
         'Déclinaisons papeterie, réseaux sociaux et accompagnement en UI design et en développement.'
       ],
-      deliverables: ['Symbole & logotype', 'Système de couleurs', 'Papeterie', 'Réseaux sociaux', 'UI design', 'Développement']
+      deliverables: ['Symbole & logotype', 'Système de couleurs', 'Papeterie', 'Réseaux sociaux', 'UI design', 'Développement'],
+      links: [
+        { label: 'lift-securite.com', url: 'https://lift-securite.com/' }
+      ]
     },
     {
       slug: 'ci360',

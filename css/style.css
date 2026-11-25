@@ -786,11 +786,11 @@ body.menu-open { overflow: hidden; }
 /* Galerie : chaque visuel garde ses proportions d'origine (aucun recadrage) */
 .gallery {
   margin-top: clamp(64px, 8vw, 128px);
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
   align-items: start;
 }
 .gallery--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.gallery--web { grid-template-columns: 1fr; gap: 16px; }
+.gallery--web { grid-template-columns: 1fr; gap: 0; }
 .gallery__item {
   position: relative; background: var(--paper-2);
   cursor: zoom-in;
@@ -808,6 +808,7 @@ body.menu-open { overflow: hidden; }
 }
 .gallery__item:hover figcaption { opacity: 1; }
 .gallery--web .gallery__item { border: 1px solid var(--rule); }
+.gallery--web .gallery__item + .gallery__item { border-top: 0; }
 
 .related { margin-top: clamp(64px, 8vw, 120px); }
 .related ul { margin-top: 14px; }
@@ -861,6 +862,7 @@ body.menu-open { overflow: hidden; }
 @media (hover: none) { .sephis-logo span { opacity: 1; } }
 
 @media (max-width: 1100px) {
+  .gallery:not(.gallery--web) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stats--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sephis-steps li { grid-column: span 6; }
   .sephis-brand__info { grid-column: 1 / -1; position: static; }
@@ -1024,7 +1026,8 @@ html.is-preloading .preloader { display: block; }
   .work__idx { grid-row: span 2; align-self: start; padding-top: 6px; }
   .work__thumb { display: none; }
   .works__head { display: none; }
-  .gallery { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .gallery { gap: 0; }
+  .gallery:not(.gallery--web) { grid-template-columns: 1fr 1fr; }
   .gallery--2 { grid-template-columns: 1fr 1fr; }
   .gallery__item--big { grid-column: 1 / -1; grid-row: auto; }
   .case-body__text, .case-body__list { grid-column: 1 / -1; }

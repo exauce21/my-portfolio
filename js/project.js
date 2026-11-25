@@ -53,10 +53,10 @@
   var stackHTML = p.stack ? '<div class="mono muted" style="margin-top:10px">' + p.stack.map(EY.esc).join(' · ') + '</div>' : '';
 
   /* ---------- Galerie ---------- */
-  /* Les visuels ne sont jamais recadrés (proportions d'origine) : grille de 3 colonnes. */
+  /* Les visuels ne sont jamais recadrés (proportions d’origine) : 4 par ligne (3 sur tablette, 2 sur mobile). */
   var spans = {}, cols = 3;
   function itemHTML(g, i) {
-    return '<figure class="gallery__item' + (spans[i] && !g.web ? ' gallery__item--' + spans[i] : '') + '" data-reveal style="--d:' + (i % 3) * 80 + '">' +
+    return '<figure class="gallery__item' + (spans[i] && !g.web ? ' gallery__item--' + spans[i] : '') + '" data-reveal style="--d:' + (i % 4) * 70 + '">' +
       '<button type="button" class="sr-only">Agrandir le visuel ' + (i + 1) + '</button>' +
       '<img src="' + g.lg + '" alt="' + EY.esc(p.name) + ' - visuel ' + (i + 1) + ' sur ' + p.gallery.length + '" width="' + g.w + '" height="' + g.h + '" loading="' + (i < 3 ? 'eager' : 'lazy') + '" decoding="async">' +
       '<figcaption class="mono">' + (g.label ? EY.esc(EY.t(g.label)) + ' - ' : '') + (i + 1 < 10 ? '0' : '') + (i + 1) + ' / ' + (p.gallery.length < 10 ? '0' : '') + p.gallery.length + '</figcaption>' +
