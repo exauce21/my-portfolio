@@ -1,5 +1,5 @@
 /* ==========================================================================
-   works.js — Liste des projets
+   works.js - Liste des projets
    - rendu depuis data.js (accueil : sélection / projets.html : tous)
    - aperçu flottant au survol : les visuels du projet défilent
      aléatoirement et suivent le curseur
@@ -15,7 +15,7 @@
   function rowHTML(p) {
     return '' +
       '<li class="work" data-slug="' + p.slug + '" data-tags="' + p.tags.join(' ') + '">' +
-        '<a class="work__link" href="projet.html?p=' + encodeURIComponent(p.slug) + '">' +
+        '<a class="work__link" href="' + P.href(p) + '">' +
           '<span class="work__idx mono">' + p.number + '</span>' +
           '<span class="work__name">' + EY.esc(p.name) + '</span>' +
           '<span class="work__sector">' + EY.esc(p.sector) + (p.kind === 'web' ? ' <span class="mono muted">· Site web</span>' : '') + '</span>' +
@@ -46,10 +46,10 @@
     var countEl = EY.$('[data-visible-count]');
     var buttons = EY.$$('[data-filter]', filterBar);
 
-    /* all : tout — brand : identités — ui : projets UI & Dev — web : sites web */
+    /* all : tout - brand : identités - ui : projets UI & Dev - web : sites web */
     var match = function (p, f) {
       if (f === 'all') return true;
-      if (f === 'web') return p.kind === 'web';
+      if (f === 'web') return p.kind === 'web' || !!p.sites;
       return p.tags.indexOf(f) > -1;
     };
     var apply = function (tag, push) {
@@ -73,7 +73,7 @@
           var url = new URL(window.location.href);
           if (tag === 'all') url.searchParams.delete('filtre'); else url.searchParams.set('filtre', tag);
           history.replaceState(null, '', url.toString());
-        } catch (e) { /* file:// — pas de mise à jour d'URL */ }
+        } catch (e) { /* file:// - pas de mise à jour d'URL */ }
       }
     };
 
@@ -137,7 +137,7 @@
     if (current === p) return;
     current = p;
     prev.classList.toggle('is-web', p.kind === 'web');
-    label.textContent = EY.t(p.name + ' — ' + p.gallery.length + ' visuels');
+    label.textContent = EY.t(p.name + ' - ' + p.gallery.length + ' visuels');
     order = EY.shuffle(p.gallery.map(function (_, i) { return i; })); step = 0;
     var first = p.gallery[order[step++]].sm;
     lastSrc = first;

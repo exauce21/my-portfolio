@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Exaucé Yanga — Portfolio
+   Exaucé Yanga - Portfolio
    Source unique des projets (liste, accueil, pages étude de cas).
 
    Ajouter un projet "brand" :
@@ -41,71 +41,95 @@ window.PORTFOLIO = (function () {
       kind: 'brand',
       name: 'RNTÉÉ',
       client: 'Réseau National TÉÉ',
-      sector: 'Éducation — Canada',
+      sector: 'Éducation - Canada',
       tags: ['brand', 'ui', 'dev'],
       images: 7,
       summary: 'Identité, site national et guide interactif pour le réseau qui accompagne les familles nouvellement arrivées au Canada.',
       description: [
         'Identité visuelle du Réseau National des Travailleuses et Travailleurs en Établissement dans les Écoles (RNTÉÉ) : un symbole inspiré de la feuille d’érable et des silhouettes en mouvement, une palette rouge affirmée et un système graphique décliné sur le print, la signalétique et le digital.',
-        'L’accompagnement s’est prolongé avec le design et le développement du site national et du guide interactif destiné aux TÉÉ.'
+        'Site national : un portail WordPress qui accompagne gratuitement les familles nouvellement arrivées dans leurs démarches scolaires (découvrir le système, trouver une école francophone, contacter un TÉÉ local), dans la continuité directe de la nouvelle identité.',
+        'Guide interactif : un outil pour structurer l’accompagnement des élèves à besoins élevés : fiches d’action par situation, boussoles par profil, grille d’intervention en quatre niveaux. Il est pensé pour rendre un contenu dense immédiatement utilisable sur le terrain.'
       ],
-      deliverables: ['Logotype & symbole', 'Système graphique', 'Supports print & signalétique', 'Web design', 'Développement'],
+      deliverables: ['Logotype & symbole', 'Système graphique', 'Supports print & signalétique', 'Arborescence & UX', 'Web design', 'Intégration WordPress', 'Développement front-end', 'Référencement naturel'],
+      stack: ['WordPress', 'Elementor', 'HTML / CSS / JavaScript', 'SEO'],
       links: [
         { label: 'teenational.ca', url: 'https://teenational.ca/' },
         { label: 'guide.teenational.ca', url: 'https://guide.teenational.ca/' }
       ],
-      related: ['teenational', 'guide-tee']
+      /* Sites réalisés : captures dans assets/img/web/<slug>-<n>.webp */
+      sites: [
+        { slug: 'teenational', label: 'Site national', images: 2 },
+        { slug: 'guide-tee', label: 'Guide interactif', images: 2 }
+      ]
+    },
+    {
+      slug: 'sephis',
+      kind: 'brand',
+      page: 'sephis.html',
+      name: 'Fondation Sephis - WAWI',
+      client: 'Fondation SEPHIS',
+      sector: 'Entrepreneuriat féminin - Sénégal',
+      tags: ['brand'],
+      summary: 'Identités visuelles et packagings pour 50 femmes entrepreneures sénégalaises du programme WAWI.',
+      description: [
+        'Dans le cadre du programme WAWI (West African Women Initiative) de la Fondation SEPHIS, j’ai accompagné en tant que consultant 50 femmes entrepreneures sénégalaises, issues des cohortes 1 à 6, dans la création ou la refonte de leur identité visuelle et la normalisation de leurs packagings.',
+        'Diagnostics, logos, palettes, typographies, cartes de visite, templates pour les réseaux sociaux et emballages conformes aux normes : des marques professionnelles, prêtes pour les marchés formels et l’accès au financement.'
+      ],
+      deliverables: ['Diagnostics', 'Logos & chartes graphiques', 'Packaging', 'Templates réseaux sociaux', 'Supports print'],
+      /* Page dédiée : sephis.html. Visuels dans assets/img/projets/sephis/<marque>/ */
+      collection: [
+        { slug: 'saveur-marine', name: 'Saveurs Marines', sector: 'Produits de la mer', images: 10 },
+        { slug: 'corine', name: 'Corinne Cake', sector: 'Pâtisserie', images: 9 },
+        { slug: 'tpm', name: 'TPM - Touba Pikine Matériaux', sector: 'Matériaux de construction', images: 8 },
+        { slug: 'touta', name: 'Touta', sector: '', images: 8 },
+        { slug: 'binaf', name: 'Maison Binaf', sector: '', images: 8 },
+        { slug: 'amoz', name: 'AMOZ', sector: '', images: 8 },
+        { slug: 'rara-fish', name: 'Rara Fish', sector: 'Produits de la mer', images: 6 },
+        { slug: 'mtb', name: 'MTB', sector: 'BTP - Construction', images: 7 }
+      ],
+      /* Logos : assets/img/projets/sephis/logos/<fichier>.webp */
+      logos: [
+        { file: 'saveur-marine', name: 'Saveurs Marines' },
+        { file: 'corine-cake', name: 'Corinne Cake Dakar' },
+        { file: 'tpm', name: 'TPM' },
+        { file: 'touta', name: 'Touta' },
+        { file: 'amoz', name: 'AMOZ' },
+        { file: 'rara-fish', name: 'Rara Fish' },
+        { file: 'mtb', name: 'MTB' },
+        { file: 'mds', name: 'MDS Seniors' },
+        { file: 'mandabio', name: 'MandaBio' },
+        { file: 'senegalette', name: 'Sénégalette' },
+        { file: 'oresto', name: 'O’Resto' },
+        { file: 'rizmis', name: 'Rizmis' },
+        { file: 'etou', name: 'Etou' },
+        { file: 'setna', name: 'Sétna' },
+        { file: 'nhs', name: 'NHS' },
+        { file: 'pro-medicalys', name: 'ProMedicalys' },
+        { file: 'moonapads', name: 'Moonapads' },
+        { file: 'fazah', name: 'Fazah Global Holding' },
+        { file: 'agro-immo', name: 'Agro-Immo' },
+        { file: 'matagrhy', name: 'MatAgrHy' },
+        { file: 'waddam', name: 'Waddam' }
+      ]
     },
     {
       slug: 'samir',
       kind: 'brand',
       name: 'Samir',
       client: 'SamirPay',
-      sector: 'Fintech — Paiement mobile',
+      sector: 'Fintech - Paiement mobile',
       tags: ['brand', 'ui', 'dev'],
       images: 10,
       summary: 'Une marque fintech chaleureuse pour une solution d’encaissement mobile simplifiée.',
       description: [
         'Identité de Samir, solution d’encaissement mobile : un monogramme fluide qui évoque le mouvement de l’argent, la typographie Filson Pro et un duo vert / orange pensé pour l’écran.',
-        'Le système a été décliné jusqu’au produit — icône d’application, interfaces, supports de communication — avec un accompagnement en UI design et en développement.'
+        'Le système a été décliné jusqu’au produit (icône d’application, interfaces, supports de communication), avec un accompagnement en UI design et en développement.',
+        'J’accompagne aussi la marque dans la création de ses visuels pour les réseaux sociaux.'
       ],
-      deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Icône d’application', 'UI design', 'Développement']
-    },
-    {
-      slug: 'teenational',
-      kind: 'web',
-      name: 'RNTÉÉ — Site national',
-      client: 'Réseau National TÉÉ',
-      sector: 'Éducation — Canada',
-      tags: ['ui', 'dev'],
-      images: 2,
-      url: 'https://teenational.ca/',
-      stack: ['WordPress', 'Elementor', 'SEO'],
-      summary: 'Le portail qui guide gratuitement les familles dans l’intégration scolaire de leurs enfants au Canada.',
-      description: [
-        'Site du Réseau National TÉÉ : un portail qui accompagne gratuitement les familles nouvellement arrivées dans leurs démarches scolaires — découvrir le système, trouver une école francophone, contacter un TÉÉ local.',
-        'Arborescence, design des pages et intégration WordPress, dans la continuité directe de la nouvelle identité de marque.'
-      ],
-      deliverables: ['Arborescence', 'Web design', 'Intégration WordPress', 'Référencement naturel'],
-      related: ['tee', 'guide-tee']
-    },
-    {
-      slug: 'guide-tee',
-      kind: 'web',
-      name: 'RNTÉÉ — Guide interactif',
-      client: 'Réseau National TÉÉ',
-      sector: 'Éducation — Canada',
-      tags: ['ui', 'dev'],
-      images: 2,
-      url: 'https://guide.teenational.ca/',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-      summary: 'Un outil interactif pour structurer l’accompagnement des élèves à besoins élevés.',
-      description: [
-        'Guide interactif d’accompagnement des élèves à besoins élevés, à l’intention des travailleuses et travailleurs d’établissement dans les écoles : fiches d’action par situation, boussoles par profil, grille d’intervention en quatre niveaux.',
-        'L’enjeu : rendre un contenu dense immédiatement utilisable sur le terrain, avec une navigation par point de départ et une interface claire.'
-      ],
-      deliverables: ['UX & architecture de contenu', 'UI design', 'Développement front-end'],
-      related: ['tee', 'teenational']
+      deliverables: ['Monogramme & logotype', 'Typographie & couleurs', 'Icône d’application', 'UI design', 'Développement', 'Visuels réseaux sociaux'],
+      links: [
+        { label: 'Visuels réseaux sociaux (Pinterest)', url: 'https://fr.pinterest.com/yangaexauce/media-posts/samir/' }
+      ]
     },
     {
       slug: 'anasa',
@@ -126,7 +150,7 @@ window.PORTFOLIO = (function () {
       slug: 'lift',
       kind: 'brand',
       name: 'Lift Sécurité',
-      client: 'Lift — Solutions de sécurité',
+      client: 'Lift - Solutions de sécurité',
       sector: 'Sécurité électronique',
       tags: ['brand', 'ui', 'dev'],
       images: 10,
@@ -135,7 +159,10 @@ window.PORTFOLIO = (function () {
         'Lift propose des solutions de surveillance et de sécurité électronique. Le symbole, construit en chevrons, évoque à la fois la protection et l’élévation ; la typographie TT Hoves et un bleu électrique installent une marque technique mais accessible.',
         'Déclinaisons papeterie, réseaux sociaux et accompagnement en UI design et en développement.'
       ],
-      deliverables: ['Symbole & logotype', 'Système de couleurs', 'Papeterie', 'Réseaux sociaux', 'UI design', 'Développement']
+      deliverables: ['Symbole & logotype', 'Système de couleurs', 'Papeterie', 'Réseaux sociaux', 'UI design', 'Développement'],
+      links: [
+        { label: 'lift-securite.com', url: 'https://lift-securite.com/' }
+      ]
     },
     {
       slug: 'ci360',
@@ -145,7 +172,7 @@ window.PORTFOLIO = (function () {
       sector: 'Conseil',
       tags: ['brand', 'ui', 'dev'],
       images: 10,
-      summary: '« Votre vision, notre expertise » — une marque de conseil ouverte et lumineuse.',
+      summary: '« Votre vision, notre expertise » : une marque de conseil ouverte et lumineuse.',
       description: [
         'Identité d’un cabinet de conseil : un monogramme circulaire et ouvert, la typographie Area Normal et un duo vert profond / citron qui donne de l’énergie à un secteur souvent austère.',
         'Le système est décliné de la papeterie aux objets, jusqu’au site web conçu et développé pour la marque.'
@@ -163,7 +190,7 @@ window.PORTFOLIO = (function () {
       summary: 'Une trame de points comme signature pour une plateforme événementielle.',
       description: [
         'Oxavents accompagne entreprises et particuliers dans la conception, l’organisation et la gestion de leurs événements. Son symbole en trame de points devient un motif, porté par la typographie Space Grotesk et un univers noir & blanc.',
-        'Déclinaisons merchandising — badges, textile, casquettes, tote bags — et accompagnement en UI design et en développement.'
+        'Déclinaisons merchandising (badges, textile, casquettes, tote bags) et accompagnement en UI design et en développement.'
       ],
       deliverables: ['Symbole & logotype', 'Typographie', 'Merchandising', 'UI design', 'Développement']
     },
@@ -187,14 +214,14 @@ window.PORTFOLIO = (function () {
       kind: 'web',
       name: 'David Banga Studio',
       client: 'David Banga',
-      sector: 'Photographie — Dakar',
+      sector: 'Photographie - Dakar',
       tags: ['ui', 'dev'],
       images: 2,
       url: 'https://davidbanga.studio/',
       stack: ['HTML', 'CSS', 'JavaScript'],
       summary: 'Un portfolio sombre et éditorial pour un photographe basé à Dakar.',
       description: [
-        'Portfolio du photographe David Banga : une direction artistique sombre et éditoriale qui laisse toute la place aux visages, une galerie filtrable par série — portraits studio, corporate, mode, couples, mariages — et un parcours de réservation de séance.'
+        'Portfolio du photographe David Banga : une direction artistique sombre et éditoriale qui laisse toute la place aux visages, une galerie filtrable par série (portraits studio, corporate, mode, couples, mariages) et un parcours de réservation de séance.'
       ],
       deliverables: ['Direction artistique web', 'UI design', 'Développement front-end', 'Galerie filtrable']
     },
@@ -203,7 +230,7 @@ window.PORTFOLIO = (function () {
       kind: 'web',
       name: 'Acquire by Pin Africa',
       client: 'Pin Africa',
-      sector: 'Médias — Formation',
+      sector: 'Médias - Formation',
       tags: ['ui', 'dev'],
       images: 2,
       url: 'https://acquire.pin-africa.com/',
@@ -225,9 +252,9 @@ window.PORTFOLIO = (function () {
       images: 2,
       url: 'https://pin-africa.com/',
       stack: ['HTML', 'CSS', 'JavaScript'],
-      summary: '« Stories that shape Africa » — l’archive vivante d’un média digital africain.',
+      summary: '« Stories that shape Africa » : l’archive vivante d’un média digital africain.',
       description: [
-        'Site de Pin Africa, média digital africain engagé pour un journalisme indépendant à la voix authentique. Le site préserve les travaux phares — vidéo, mobile, storytelling interactif, articles — et raconte la mission du média.'
+        'Site de Pin Africa, média digital africain engagé pour un journalisme indépendant à la voix authentique. Le site préserve les travaux phares (vidéo, mobile, storytelling interactif, articles) et raconte la mission du média.'
       ],
       deliverables: ['UI design', 'Développement front-end', 'Référencement naturel'],
       related: ['acquire']
@@ -237,7 +264,7 @@ window.PORTFOLIO = (function () {
       kind: 'brand',
       name: 'Kult',
       client: 'Kult',
-      sector: 'RH — Tech',
+      sector: 'RH - Tech',
       tags: ['brand'],
       images: 10,
       summary: 'La plateforme RH mobile des employés de terrain en Afrique francophone.',
@@ -269,7 +296,7 @@ window.PORTFOLIO = (function () {
       sector: 'Formation',
       tags: ['brand'],
       images: 10,
-      summary: '« Libérez votre potentiel » — une académie aux couleurs vibrantes.',
+      summary: '« Libérez votre potentiel » : une académie aux couleurs vibrantes.',
       description: [
         'Identité de Skills Development Academy : un symbole en entrelacs, la typographie Sora et une palette violette et vibrante. Les tracés fluides du symbole deviennent un langage graphique pour les campagnes, la papeterie et les produits dérivés.'
       ],
@@ -280,12 +307,12 @@ window.PORTFOLIO = (function () {
       kind: 'brand',
       name: 'ETPP',
       client: 'ETPP',
-      sector: 'BTP — Construction',
+      sector: 'BTP - Construction',
       tags: ['brand'],
       images: 8,
       summary: '« Construire la qualité, brique par brique. »',
       description: [
-        'Identité d’une entreprise de construction : un symbole dynamique, un jaune-vert de sécurité associé au noir, et des déclinaisons pensées pour le chantier — casques, conteneurs, panneaux — comme pour la papeterie.'
+        'Identité d’une entreprise de construction : un symbole dynamique, un jaune-vert de sécurité associé au noir, et des déclinaisons pensées pour le chantier (casques, conteneurs, panneaux) comme pour la papeterie.'
       ],
       deliverables: ['Symbole & logotype', 'Couleurs', 'Déclinaisons chantier', 'Papeterie']
     },
@@ -325,9 +352,9 @@ window.PORTFOLIO = (function () {
       sector: 'Art & culture',
       tags: ['brand'],
       images: 5,
-      summary: '« African Art, Global Impact » — affiches et éditions pour le Musée de la Photographie.',
+      summary: '« African Art, Global Impact » : affiches et éditions pour le Musée de la Photographie.',
       description: [
-        'Pour le Musée de la Photographie de Saint-Louis (Sénégal), une série d’affiches et de couvertures où le monogramme du musée devient fenêtre sur les œuvres — autour de la campagne « African Art, Global Impact » et des éditions « 100 regards ».'
+        'Pour le Musée de la Photographie de Saint-Louis (Sénégal), une série d’affiches et de couvertures où le monogramme du musée devient fenêtre sur les œuvres, autour de la campagne « African Art, Global Impact » et des éditions « 100 regards ».'
       ],
       deliverables: ['Affiches', 'Couvertures', 'Campagne']
     },
@@ -350,7 +377,7 @@ window.PORTFOLIO = (function () {
       kind: 'brand',
       name: 'Proskills IT',
       client: 'Proskills IT',
-      sector: 'Formation tech — Lomé',
+      sector: 'Formation tech - Lomé',
       tags: ['brand'],
       images: 7,
       summary: 'Un monogramme « IT » en deux tons pour un centre de formation tech.',
@@ -366,42 +393,34 @@ window.PORTFOLIO = (function () {
      Nouveau projet : ajouter son entrée ici (sinon il reste en français). */
   var EN = {
     tee: {
-      sector: 'Education — Canada',
+      sector: 'Education - Canada',
       summary: 'Identity, national website and interactive guide for the network that supports newly arrived families in Canada.',
       description: [
         'Visual identity for the Réseau National des Travailleuses et Travailleurs en Établissement dans les Écoles (RNTÉÉ), Canada’s national network of settlement workers in schools: a symbol inspired by the maple leaf and figures in motion, a bold red palette and a graphic system rolled out across print, signage and digital.',
-        'The collaboration continued with the design and development of the national website and the interactive guide for settlement workers.'
+        'National website: a WordPress portal that supports newly arrived families free of charge with school matters (understanding the system, finding a French-language school, contacting a local settlement worker), in direct continuity with the new identity.',
+        'Interactive guide: a tool to structure support for students with high needs: action sheets by situation, compasses by profile, a four-level intervention grid. It is designed to make dense content immediately usable in the field.'
       ],
-      deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Web design', 'Development']
+      deliverables: ['Logotype & symbol', 'Graphic system', 'Print & signage', 'Site structure & UX', 'Web design', 'WordPress build', 'Front-end development', 'Search engine optimization']
+    },
+    sephis: {
+      name: 'Sephis Foundation - WAWI',
+      sector: 'Women’s entrepreneurship - Senegal',
+      summary: 'Visual identities and packaging for 50 Senegalese women entrepreneurs in the WAWI program.',
+      description: [
+        'As part of the SEPHIS Foundation’s WAWI program (West African Women Initiative), I worked as a consultant with 50 Senegalese women entrepreneurs, from cohorts 1 to 6, to create or redesign their visual identity and bring their packaging up to standard.',
+        'Diagnostics, logos, palettes, typography, business cards, social media templates and standards-compliant packaging: professional brands, ready for formal markets and access to financing.'
+      ],
+      deliverables: ['Diagnostics', 'Logos & brand guidelines', 'Packaging', 'Social media templates', 'Print materials']
     },
     samir: {
-      sector: 'Fintech — Mobile payments',
+      sector: 'Fintech - Mobile payments',
       summary: 'A warm fintech brand for a simplified mobile payment solution.',
       description: [
         'Identity for Samir, a mobile payment solution: a fluid monogram that evokes the movement of money, the Filson Pro typeface and a green / orange pairing designed for screens.',
-        'The system was carried all the way into the product — app icon, interfaces, communication materials — with support in UI design and development.'
+        'The system was carried all the way into the product (app icon, interfaces, communication materials), with support in UI design and development.',
+        'I also support the brand in creating its social media visuals.'
       ],
-      deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development']
-    },
-    teenational: {
-      name: 'RNTÉÉ — National website',
-      sector: 'Education — Canada',
-      summary: 'The portal that guides families, free of charge, through their children’s school integration in Canada.',
-      description: [
-        'Website for the Réseau National TÉÉ: a portal that supports newly arrived families free of charge with school matters — understanding the system, finding a French-language school, contacting a local settlement worker.',
-        'Site structure, page design and WordPress build, in direct continuity with the new brand identity.'
-      ],
-      deliverables: ['Site structure', 'Web design', 'WordPress build', 'Search engine optimization']
-    },
-    'guide-tee': {
-      name: 'RNTÉÉ — Interactive guide',
-      sector: 'Education — Canada',
-      summary: 'An interactive tool to structure support for students with high needs.',
-      description: [
-        'Interactive guide for supporting students with high needs, written for settlement workers in schools: action sheets by situation, compasses by profile, a four-level intervention grid.',
-        'The challenge: make dense content immediately usable in the field, with navigation by starting point and a clear interface.'
-      ],
-      deliverables: ['UX & content architecture', 'UI design', 'Front-end development']
+      deliverables: ['Monogram & logotype', 'Typography & colors', 'App icon', 'UI design', 'Development', 'Social media visuals']
     },
     anasa: {
       sector: 'Pilates & wellness',
@@ -414,7 +433,7 @@ window.PORTFOLIO = (function () {
     },
     lift: {
       name: 'Lift Security',
-      client: 'Lift — Security solutions',
+      client: 'Lift - Security solutions',
       sector: 'Electronic security',
       summary: 'A chevron symbol that combines protection and elevation.',
       description: [
@@ -425,7 +444,7 @@ window.PORTFOLIO = (function () {
     },
     ci360: {
       sector: 'Consulting',
-      summary: '“Your vision, our expertise” — an open, bright consulting brand.',
+      summary: '“Your vision, our expertise”: an open, bright consulting brand.',
       description: [
         'Identity for a consulting firm: a circular, open monogram, the Area Normal typeface and a deep green / lime pairing that brings energy to an often austere sector.',
         'The system extends from stationery to objects, all the way to the website designed and developed for the brand.'
@@ -437,7 +456,7 @@ window.PORTFOLIO = (function () {
       summary: 'A dot pattern as the signature of an events platform.',
       description: [
         'Oxavents helps companies and individuals design, organize and manage their events. Its dot-pattern symbol becomes a motif, carried by the Space Grotesk typeface and a black & white universe.',
-        'Merchandise applications — badges, apparel, caps, tote bags — plus support in UI design and development.'
+        'Merchandise applications (badges, apparel, caps, tote bags) plus support in UI design and development.'
       ],
       deliverables: ['Symbol & logotype', 'Typography', 'Merchandise', 'UI design', 'Development']
     },
@@ -451,15 +470,15 @@ window.PORTFOLIO = (function () {
       deliverables: ['Logotype & mascot', 'Pattern & colors', 'Stationery & goodies', 'UI design', 'Development']
     },
     davidbanga: {
-      sector: 'Photography — Dakar',
+      sector: 'Photography - Dakar',
       summary: 'A dark, editorial portfolio for a Dakar-based photographer.',
       description: [
-        'Portfolio for photographer David Banga: a dark, editorial art direction that puts faces front and center, a gallery filterable by series — studio portraits, corporate, fashion, couples, weddings — and a session booking flow.'
+        'Portfolio for photographer David Banga: a dark, editorial art direction that puts faces front and center, a gallery filterable by series (studio portraits, corporate, fashion, couples, weddings) and a session booking flow.'
       ],
       deliverables: ['Web art direction', 'UI design', 'Front-end development', 'Filterable gallery']
     },
     acquire: {
-      sector: 'Media — Training',
+      sector: 'Media - Training',
       summary: 'Pin Africa’s journalism training initiative, told in one website.',
       description: [
         'Website for Pin Africa’s journalism training and media development initiative: online courses, field programs, impact figures, press coverage and partners, presented in a warm, accessible interface.'
@@ -468,14 +487,14 @@ window.PORTFOLIO = (function () {
     },
     'pin-africa': {
       sector: 'Digital media',
-      summary: '“Stories that shape Africa” — the living archive of an African digital media outlet.',
+      summary: '“Stories that shape Africa”: the living archive of an African digital media outlet.',
       description: [
-        'Website for Pin Africa, an African digital media outlet committed to independent journalism with an authentic voice. The site preserves its flagship work — video, mobile, interactive storytelling, articles — and tells the story of its mission.'
+        'Website for Pin Africa, an African digital media outlet committed to independent journalism with an authentic voice. The site preserves its flagship work (video, mobile, interactive storytelling, articles) and tells the story of its mission.'
       ],
       deliverables: ['UI design', 'Front-end development', 'Search engine optimization']
     },
     kult: {
-      sector: 'HR — Tech',
+      sector: 'HR - Tech',
       summary: 'The mobile HR platform for frontline employees in French-speaking Africa.',
       description: [
         'Kult is the first mobile HR platform dedicated to frontline employees in French-speaking Africa. A two-tone “K” symbol, an ochre and midnight blue palette, a precise construction grid.',
@@ -493,7 +512,7 @@ window.PORTFOLIO = (function () {
     },
     skda: {
       sector: 'Training',
-      summary: '“Unlock your potential” — an academy in vibrant colors.',
+      summary: '“Unlock your potential”: an academy in vibrant colors.',
       description: [
         'Identity for Skills Development Academy: an interlaced symbol, the Sora typeface and a vibrant purple palette. The symbol’s fluid lines become a graphic language for campaigns, stationery and merchandise.'
       ],
@@ -503,7 +522,7 @@ window.PORTFOLIO = (function () {
       sector: 'Construction',
       summary: '“Building quality, brick by brick.”',
       description: [
-        'Identity for a construction company: a dynamic symbol, a safety yellow-green paired with black, and applications designed for the job site — helmets, containers, signs — as well as stationery.'
+        'Identity for a construction company: a dynamic symbol, a safety yellow-green paired with black, and applications designed for the job site (helmets, containers, signs) as well as stationery.'
       ],
       deliverables: ['Symbol & logotype', 'Colors', 'Job site applications', 'Stationery']
     },
@@ -525,9 +544,9 @@ window.PORTFOLIO = (function () {
     },
     mupho: {
       sector: 'Art & culture',
-      summary: '“African Art, Global Impact” — posters and publications for the Museum of Photography.',
+      summary: '“African Art, Global Impact”: posters and publications for the Museum of Photography.',
       description: [
-        'For the Musée de la Photographie de Saint-Louis (Senegal), a series of posters and covers where the museum’s monogram becomes a window onto the works — around the “African Art, Global Impact” campaign and the “100 regards” publications.'
+        'For the Musée de la Photographie de Saint-Louis (Senegal), a series of posters and covers where the museum’s monogram becomes a window onto the works, around the “African Art, Global Impact” campaign and the “100 regards” publications.'
       ],
       deliverables: ['Posters', 'Covers', 'Campaign']
     },
@@ -540,7 +559,7 @@ window.PORTFOLIO = (function () {
       deliverables: ['Logotype', 'Construction grid', 'Palette', 'Stationery & goodies']
     },
     'proskill-it': {
-      sector: 'Tech training — Lomé',
+      sector: 'Tech training - Lomé',
       summary: 'A two-tone “IT” monogram for a tech training center.',
       description: [
         'Identity for an intensive IT training center based in Lomé: a two-tone “IT” monogram, the Sora typeface and a blue / aqua green palette, rolled out across digital media and social networks.'
@@ -557,7 +576,7 @@ window.PORTFOLIO = (function () {
   }
 
   /* Sélection affichée sur la page d'accueil */
-  var featured = ['tee', 'samir', 'davidbanga', 'anasa', 'acquire', 'lift', 'kult', 'ci360'];
+  var featured = ['tee', 'sephis', 'samir', 'davidbanga', 'anasa', 'acquire', 'lift', 'kult', 'ci360'];
 
   /* ---------- Helpers ---------- */
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -566,7 +585,22 @@ window.PORTFOLIO = (function () {
     p.index = i + 1;
     p.number = 'N°' + pad(i + 1);
     p.gallery = [];
-    for (var k = 1; k <= p.images; k++) {
+    /* Projet "collection" (ex. Sephis) : 2 visuels par marque pour les aperçus */
+    if (p.collection) {
+      p.collection.forEach(function (b) {
+        b.gallery = [];
+        for (var j = 1; j <= b.images; j++) {
+          b.gallery.push({
+            lg: 'assets/img/projets/' + p.slug + '/' + b.slug + '/' + pad(j) + '.webp',
+            sm: 'assets/img/projets/' + p.slug + '/' + b.slug + '/' + pad(j) + '-sm.webp',
+            w: 1050, h: 1400
+          });
+        }
+        [1, 3].forEach(function (j) { if (b.gallery[j]) p.gallery.push(b.gallery[j]); });
+      });
+      p.images = p.gallery.length;
+    }
+    for (var k = 1; k <= (p.collection ? 0 : p.images); k++) {
       if (p.kind === 'web') {
         p.gallery.push({
           lg: 'assets/img/web/' + p.slug + '-' + k + '.webp',
@@ -581,13 +615,32 @@ window.PORTFOLIO = (function () {
         });
       }
     }
+    /* Captures des sites réalisés (projet fusionné, ex. RNTÉÉ) */
+    if (p.sites) {
+      p.sites.forEach(function (site) {
+        for (var m = 1; m <= site.images; m++) {
+          p.gallery.push({
+            lg: 'assets/img/web/' + site.slug + '-' + m + '.webp',
+            sm: 'assets/img/web/' + site.slug + '-' + m + '-sm.webp',
+            w: 1440, h: 900, web: true, label: site.label
+          });
+        }
+      });
+    }
     p.cover = p.gallery[0];
   });
 
+  /* Anciennes adresses de projets fusionnés */
+  var ALIASES = { teenational: 'tee', 'guide-tee': 'tee' };
+
   function bySlug(slug) {
+    if (ALIASES[slug]) slug = ALIASES[slug];
     for (var i = 0; i < projects.length; i++) if (projects[i].slug === slug) return projects[i];
     return null;
   }
+
+  /* Lien vers la page du projet (page dédiée si définie) */
+  function href(p) { return p.page || ('projet.html?p=' + encodeURIComponent(p.slug)); }
 
   function count(tag) {
     if (!tag || tag === 'all') return projects.length;
@@ -600,6 +653,7 @@ window.PORTFOLIO = (function () {
     featured: featured,
     TAG_LABELS: TAG_LABELS,
     bySlug: bySlug,
+    href: href,
     count: count
   };
 })();

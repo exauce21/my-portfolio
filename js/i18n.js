@@ -1,5 +1,5 @@
 /* ==========================================================================
-   i18n.js — Traduction FR / EN
+   i18n.js - Traduction FR / EN
    Le français est écrit dans le HTML. En anglais, chaque texte (et les
    attributs alt, aria-label, title, data-pre-line, meta) est remplacé
    via le dictionnaire ci-dessous, clé = texte français exact.
@@ -29,15 +29,15 @@
   /* ---------- Dictionnaire FR → EN ---------- */
   var EN = {
     /* Meta */
-    'Exaucé Yanga — Développeur Front-end & Brand Designer': 'Exaucé Yanga — Front-end Developer & Brand Designer',
+    'Exaucé Yanga - Développeur Front-end & Brand Designer': 'Exaucé Yanga - Front-end Developer & Brand Designer',
     'Portfolio d’Exaucé Yanga, développeur front-end et brand designer : identités visuelles, web design et développement de sites sur mesure.': 'Portfolio of Exaucé Yanga, front-end developer and brand designer: visual identities, web design and custom website development.',
-    'Projets — Exaucé Yanga': 'Projects — Exaucé Yanga',
+    'Projets - Exaucé Yanga': 'Projects - Exaucé Yanga',
     'Tous les projets d’Exaucé Yanga : identités visuelles (brand), web design (UI) et développement (dev).': 'All projects by Exaucé Yanga: visual identities (brand), web design (UI) and development (dev).',
-    'Projet — Exaucé Yanga': 'Project — Exaucé Yanga',
-    'Étude de cas — identité visuelle, web design et développement par Exaucé Yanga.': 'Case study — visual identity, web design and development by Exaucé Yanga.',
-    'Page introuvable — Exaucé Yanga': 'Page not found — Exaucé Yanga',
+    'Projet - Exaucé Yanga': 'Project - Exaucé Yanga',
+    'Étude de cas - identité visuelle, web design et développement par Exaucé Yanga.': 'Case study - visual identity, web design and development by Exaucé Yanga.',
+    'Page introuvable - Exaucé Yanga': 'Page not found - Exaucé Yanga',
     'Cette page n’existe pas.': 'This page does not exist.',
-    'Projet introuvable — Exaucé Yanga': 'Project not found — Exaucé Yanga',
+    'Projet introuvable - Exaucé Yanga': 'Project not found - Exaucé Yanga',
 
     /* Préchargeur */
     '--INITIALISATION:': '--INITIALIZING:',
@@ -72,10 +72,10 @@
     'Défiler': 'Scroll',
 
     /* À propos */
-    '(01) — À propos': '(01) — About',
+    '(01) - À propos': '(01) - About',
     'Développeur front-end et brand designer, j’accompagne les marques': 'Front-end developer and brand designer, I take brands',
     'de l’idée au pixel : identité visuelle, web design et développement': 'from idea to pixel: visual identity, web design and development',
-    '— une seule': '— one single',
+    'une seule': 'one single',
     ', de bout en bout.': ', end to end.',
     'Approche': 'Approach',
     'De Dakar à Edmonton, j’ai appris à faire dialoguer le design et le code. Je construis des identités cohérentes, puis je les traduis en interfaces rapides, accessibles et pensées pour durer.': 'From Dakar to Edmonton, I learned to make design and code work together. I build consistent identities, then turn them into fast, accessible interfaces designed to last.',
@@ -93,7 +93,7 @@
     'En activité depuis': 'Active since',
 
     /* Projets (accueil) */
-    '(02) — Projets sélectionnés': '(02) — Selected projects',
+    '(02) - Projets sélectionnés': '(02) - Selected projects',
     'projets au total': 'projects in total',
     'Travaux': 'Selected',
     'choisis': 'work',
@@ -122,7 +122,7 @@
     'Hébergement, mises à jour et assistance continue': 'Hosting, updates and ongoing support',
     'Démarrer un projet': 'Start a project',
     '(À propos & exemples)': '(About & examples)',
-    'Des sites rapides, accessibles et pensés pour durer — du site vitrine à la plateforme de contenus, chaque ligne de code sert l’expérience.': 'Fast, accessible websites built to last — from showcase sites to content platforms, every line of code serves the experience.',
+    'Des sites rapides, accessibles et pensés pour durer, du site vitrine à la plateforme de contenus, chaque ligne de code sert l’expérience.': 'Fast, accessible websites built to last, from showcase sites to content platforms: every line of code serves the experience.',
     'Site Acquire by Pin Africa': 'Acquire by Pin Africa website',
     'Site David Banga Studio': 'David Banga Studio website',
     'Versions « wordmark » et « monogramme »': 'Wordmark and monogram versions',
@@ -136,8 +136,8 @@
     'Créer ma marque': 'Create my brand',
     'Voir les identités': 'See the identities',
     'Une identité forte raconte une histoire avant le premier mot. Je construis des systèmes de marque cohérents, du logotype aux déclinaisons print, digitales et sociales.': 'A strong identity tells a story before the first word. I build consistent brand systems, from the logotype to print, digital and social applications.',
-    'Identité Anasa — façade du studio': 'Anasa identity — studio storefront',
-    'Identité Kult — campagne d’affichage': 'Kult identity — poster campaign',
+    'Identité Anasa - façade du studio': 'Anasa identity - studio storefront',
+    'Identité Kult - campagne d’affichage': 'Kult identity - poster campaign',
     'Parcours utilisateurs, arborescence et wireframes': 'User journeys, site maps and wireframes',
     'Interfaces web & mobile haute fidélité': 'High-fidelity web & mobile interfaces',
     'Composants, styles et documentation': 'Components, styles and documentation',
@@ -148,19 +148,22 @@
     'Voir les interfaces': 'See the interfaces',
     'Des interfaces claires qui servent à la fois la marque et l’utilisateur : chaque écran a une intention, chaque détail une raison d’être.': 'Clear interfaces that serve both the brand and the user: every screen has an intention, every detail a reason to be.',
     'Guide interactif RNTÉÉ': 'RNTÉÉ interactive guide',
-    'RNTÉÉ — Guide interactif': 'RNTÉÉ — Interactive guide',
+    'RNTÉÉ - Guide interactif': 'RNTÉÉ - Interactive guide',
     'Site Pin Africa': 'Pin Africa website',
+    'Site national': 'National website',
+    'Visuels réseaux sociaux (Pinterest)': 'Social media visuals (Pinterest)',
+    'Guide interactif': 'Interactive guide',
 
     /* Clients */
     '17 marques': '17 brands',
     'Ils m’ont fait': 'They',
     'confiance': 'trusted me',
-    'Lift — Solutions de sécurité': 'Lift — Security solutions',
+    'Lift - Solutions de sécurité': 'Lift - Security solutions',
     'Votre marque ?': 'Your brand?',
     'Parlons-en': 'Let’s talk',
 
     /* Recommandations */
-    '(05) — Recommandations': '(05) — Recommendations',
+    '(05) - Recommandations': '(05) - Recommendations',
     'Ce qu’ils': 'What they',
     'en disent': 'say',
     'Quatre recommandations publiées sur LinkedIn par des clients et des collaborateurs.': 'Four recommendations posted on LinkedIn by clients and collaborators.',
@@ -192,9 +195,9 @@
     'Réseaux': 'Social',
     'Disponibilité': 'Availability',
     'Ouvert aux nouveaux projets': 'Open to new projects',
-    'Basé en France — fuseau Paris': 'Based in France — Paris time',
+    'Basé en France - fuseau Paris': 'Based in France - Paris time',
     'Disponible pour de nouveaux projets': 'Available for new projects',
-    'Exaucé Yanga — Tous droits réservés': 'Exaucé Yanga — All rights reserved',
+    'Exaucé Yanga - Tous droits réservés': 'Exaucé Yanga - All rights reserved',
     'Conçu & développé par Exaucé Yanga': 'Designed & developed by Exaucé Yanga',
     'Retour en haut ↑': 'Back to top ↑',
 
@@ -206,14 +209,14 @@
     'Tout': 'All',
     'Sites web': 'Websites',
     'Liste des projets': 'Project list',
-    'projets affichés — survolez une ligne pour faire défiler les visuels.': 'projects shown — hover over a row to flip through the visuals.',
+    'projets affichés. Survolez une ligne pour faire défiler les visuels.': 'projects shown. Hover over a row to flip through the visuals.',
 
     /* Page projet */
     'Visionneuse d’images': 'Image viewer',
     'Fermer ✕': 'Close ✕',
     '← Précédent': '← Previous',
     'Suivant →': 'Next →',
-    'Erreur — projet introuvable': 'Error — project not found',
+    'Erreur - projet introuvable': 'Error - project not found',
     'Ce projet n’existe pas': 'This project doesn’t exist',
     '(encore)': '(yet)',
     'Voir tous les projets': 'See all projects',
@@ -226,8 +229,73 @@
     'Visiter le site': 'Visit the website',
     'Projet suivant': 'Next project',
 
+    /* Page mission Sephis */
+    ' · Exaucé Yanga': 'Sephis Foundation - WAWI · Exaucé Yanga',
+    'Mission de consultant pour la Fondation SEPHIS (programme WAWI) : identités visuelles et packagings pour 50 femmes entrepreneures sénégalaises.': 'Consulting mission for the SEPHIS Foundation (WAWI program): visual identities and packaging for 50 Senegalese women entrepreneurs.',
+    'Identités visuelles et packagings pour 50 femmes entrepreneures sénégalaises.': 'Visual identities and packaging for 50 Senegalese women entrepreneurs.',
+    'Fondation Sephis': 'Sephis Foundation',
+    'Fondation SEPHIS': 'SEPHIS Foundation',
+    'Programme': 'Program',
+    'Rôle': 'Role',
+    'Consultant en identité visuelle & packaging': 'Visual identity & packaging consultant',
+    'Période': 'Period',
+    'Juillet 2025 - Juillet 2026': 'July 2025 - July 2026',
+    'Dakar, Sénégal': 'Dakar, Senegal',
+    '(01) - La mission': '(01) - The mission',
+    '(Contexte)': '(Context)',
+    'Au Sénégal, les femmes représentent 52 % de la population active, mais seulement 20 % des entreprises du secteur formel sont dirigées par des femmes, qui essuient 30 % de refus de prêts bancaires, contre 18 % pour les hommes.': 'In Senegal, women make up 52% of the workforce, yet only 20% of formal-sector businesses are run by women, who face a 30% bank loan rejection rate, compared with 18% for men.',
+    'Une identité visuelle peu attrayante et des emballages non conformes freinent directement la commercialisation et l’accès au financement. Le programme WAWI de la Fondation SEPHIS fait office de passerelle technique et financière.': 'An unappealing visual identity and non-compliant packaging directly hold back sales and access to financing. The SEPHIS Foundation’s WAWI program acts as a technical and financial bridge.',
+    'Ma mission : accompagner 50 entrepreneures, issues des cohortes 1 à 6, dans la création ou l’ajustement de leur identité visuelle et la normalisation de leurs packagings.': 'My mission: support 50 entrepreneurs, from cohorts 1 to 6, in creating or refining their visual identity and bringing their packaging up to standard.',
+    'Diagnostics individualisés': 'Individual diagnostics',
+    'Logos & chartes graphiques': 'Logos & brand guidelines',
+    'Palettes & typographies': 'Palettes & typography',
+    'Cartes de visite': 'Business cards',
+    'Templates réseaux sociaux': 'Social media templates',
+    'Brochures & flyers': 'Brochures & flyers',
+    'Packagings conformes aux normes': 'Standards-compliant packaging',
+    'Entrepreneures accompagnées': 'Entrepreneurs supported',
+    'Kits d’identité visuelle': 'Visual identity kits',
+    'Diagnostics': 'Diagnostics',
+    'Kits de communication': 'Communication kits',
+    'Refontes': 'Redesigns',
+    '(02) - Méthode': '(02) - Method',
+    '4 étapes': '4 steps',
+    'Une méthode': 'A method',
+    'en 4 temps': 'in 4 steps',
+    'Audit & prise de contact': 'Audit & first contact',
+    'Échanges directs avec chaque entrepreneure pour cerner l’histoire de la marque et les besoins de son marché.': 'Direct conversations with each entrepreneur to understand the story of the brand and the needs of its market.',
+    'Phase conceptuelle': 'Concept phase',
+    'Analyse des logos existants, souvent obsolètes ou générés par IA, et proposition d’axes de modernisation ou de refonte complète.': 'Analysis of existing logos, often outdated or AI-generated, and proposals for a refresh or a complete redesign.',
+    'Production graphique': 'Design production',
+    'Développement complet des chartes graphiques, des supports et des packagings sous la suite Adobe et Canva Pro.': 'Full development of brand guidelines, materials and packaging with Adobe Creative Suite and Canva Pro.',
+    'Livraison & autonomie': 'Delivery & autonomy',
+    'Remise des kits d’identité avec leurs fichiers sources, et conseils pour appliquer la charte sur tous les supports.': 'Handover of identity kits with their source files, plus guidance on applying the guidelines across every medium.',
+    '(03) - Identités réalisées': '(03) - Identities created',
+    'Sélection': 'Selection',
+    'Marques': 'Brands',
+    'accompagnées': 'supported',
+    'Activez JavaScript pour afficher les identités.': 'Enable JavaScript to see the identities.',
+    '(04) - Logos conçus': '(04) - Logos designed',
+    'logos': 'logos',
+    'Logos': 'Logos',
+    'conçus': 'designed',
+    '(05) - Résultats': '(05) - Results',
+    '(Impact)': '(Impact)',
+    'Chaque entreprise dispose désormais de fichiers sources exploitables pour ses impressions et sa communication digitale.': 'Every business now has usable source files for its printing and digital communication.',
+    'Des identités artisanales ou générées par IA ont laissé place à des visuels uniques, stables et représentatifs des valeurs locales sénégalaises, prêts pour les marchés formels.': 'Homemade or AI-generated identities have given way to unique, consistent visuals that reflect local Senegalese values, ready for formal markets.',
+    'Des templates prêts à l’emploi rendent les entrepreneures autonomes dans la production de leurs contenus pour les réseaux sociaux.': 'Ready-to-use templates let the entrepreneurs produce their own social media content.',
+    'Recommandations': 'Recommendations',
+    'Appliquer les chartes sur tous les supports': 'Apply the guidelines on every medium',
+    'Standardiser la production des packagings': 'Standardize packaging production',
+    'Investir dans des séances photo professionnelles': 'Invest in professional photo shoots',
+    'Former les équipes internes à la charte': 'Train internal teams on the guidelines',
+    'Produits de la mer': 'Seafood',
+    'Pâtisserie': 'Pastry',
+    'Matériaux de construction': 'Building materials',
+    'BTP - Construction': 'Construction',
+
     /* 404 */
-    'Erreur — page introuvable': 'Error — page not found',
+    'Erreur - page introuvable': 'Error - page not found',
     'Cette page s’est égarée. Les projets, eux, sont bien là.': 'This page got lost. The projects, however, are right here.',
     'Retour à l’accueil': 'Back to home',
     'Voir les projets': 'See the projects'
@@ -235,11 +303,13 @@
 
   /* Textes avec des nombres variables */
   var EN_RULES = [
-    [/^Étude de cas — (\d+) visuels$/, 'Case study — $1 visuals'],
+    [/^Étude de cas - (\d+) visuels$/, 'Case study - $1 visuals'],
     [/^Agrandir le visuel (\d+)$/, 'Enlarge image $1'],
-    [/^(.+) — visuel (\d+) sur (\d+)$/, '$1 — image $2 of $3'],
-    [/^(.+) — visuel (\d+)$/, '$1 — image $2'],
-    [/^(.+) — (\d+) visuels$/, '$1 — $2 visuals']
+    [/^(.+) - visuel (\d+) sur (\d+)$/, '$1 - image $2 of $3'],
+    [/^(.+) - visuel (\d+)$/, '$1 - image $2'],
+    [/^(.+) - (\d+) visuels$/, '$1 - $2 visuals'],
+    [/^(\d+) visuels$/, '$1 visuals'],
+    [/^Logo (.+)$/, '$1 logo']
   ];
 
   /* ---------- Traduction ---------- */

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Exaucé Yanga — Portfolio
+   Exaucé Yanga - Portfolio
    style.css
 
    01. Fonts
@@ -22,7 +22,7 @@
    18. Responsive
    ========================================================================== */
 
-/* 01. Fonts — auto-hébergées (pas d'appel à Google Fonts) ------------------ */
+/* 01. Fonts - auto-hébergées (pas d'appel à Google Fonts) ------------------ */
 @font-face {
   font-family: 'Libre Caslon Condensed';
   src: url('../assets/fonts/libre-caslon-condensed-latin-400-normal.woff2') format('woff2');
@@ -185,7 +185,7 @@ h1, h2, h3, h4 { font-weight: 400; }
 .cross::before { left: 6px; top: 0; width: 1px; height: 13px; }
 .cross::after { top: 6px; left: 0; height: 1px; width: 13px; }
 
-/* Ligne d'étiquette de section : (01) — À propos ............ Index */
+/* Ligne d'étiquette de section : (01) - À propos ............ Index */
 .label-row {
   display: flex; justify-content: space-between; align-items: baseline; gap: var(--gap);
   padding-top: 10px; border-top: 1px solid var(--rule-strong);
@@ -267,7 +267,6 @@ body.menu-open { overflow: hidden; }
   min-height: 620px;
   overflow: hidden;
   isolation: isolate;
-  cursor: crosshair;
 }
 .hero__dots {
   position: absolute; inset: 0; z-index: -1;
@@ -519,8 +518,8 @@ body.menu-open { overflow: hidden; }
   grid-column: 1 / span 6;
   align-self: start;
   position: sticky; top: calc(var(--header-h) + 24px);
-  font: italic 400 clamp(140px, 22vw, 380px)/.72 var(--f-serif);
-  letter-spacing: -.04em;
+  font: 500 clamp(88px, 12vw, 200px)/.8 var(--f-sans);
+  letter-spacing: -.06em;
   -webkit-text-stroke: 0;
 }
 .service__num small {
@@ -668,6 +667,20 @@ body.menu-open { overflow: hidden; }
 .reco__li { display: inline-flex; align-items: center; gap: 6px; }
 
 /* 13. Contact / footer ------------------------------------------------------- */
+/* Curseur au logo « ey » : en-têtes de pages (fond clair) et contact (fond sombre).
+   Liens et boutons gardent la main habituelle. Point actif au centre du logo. */
+@media (hover: hover) and (pointer: fine) {
+  .hero, .page-hero, .case-hero, .e404 { cursor: url("../assets/img/cursor-ey.svg") 32 32, auto; }
+  .contact { cursor: url("../assets/img/cursor-ey-light.svg") 32 32, auto; }
+}
+.cursor-trail {
+  position: fixed; left: 0; top: 0; z-index: 58;
+  width: 64px; height: 64px; opacity: 0;
+  background: url("../assets/img/cursor-ey.svg") center / contain no-repeat;
+  pointer-events: none; will-change: transform, opacity;
+}
+.cursor-trail--light { background-image: url("../assets/img/cursor-ey-light.svg"); }
+
 .contact {
   margin-top: var(--section-pad);
   background: var(--ink); color: var(--paper);
@@ -783,24 +796,26 @@ body.menu-open { overflow: hidden; }
 .case-body__list li { padding: 9px 0; border-top: 1px solid var(--rule); font-size: 15px; }
 .case-body__list li:last-child { border-bottom: 1px solid var(--rule); }
 
+/* Galerie : chaque visuel garde ses proportions d'origine (aucun recadrage) */
 .gallery {
   margin-top: clamp(64px, 8vw, 128px);
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+  align-items: start;
 }
-.gallery--web { grid-template-columns: 1fr; gap: 16px; }
+.gallery--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gallery--web { grid-template-columns: 1fr; gap: 0; }
 .gallery__item {
-  position: relative; overflow: hidden; background: var(--paper-2);
-  aspect-ratio: 3 / 4;
+  position: relative; background: var(--paper-2);
   cursor: zoom-in;
 }
-.gallery__item--big { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
-.gallery__item--wide { grid-column: span 2; aspect-ratio: auto; }
-.gallery--web .gallery__item { aspect-ratio: 16 / 10; }
+.gallery__item--big { grid-column: span 2; grid-row: span 2; }
 .gallery__item img {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; transition: transform 1.2s var(--ease);
+  display: block; width: 100%; height: auto;
+  transition: opacity .4s var(--ease);
 }
-.gallery__item:hover img { transform: scale(1.025); }
+.gallery__item:hover img { opacity: .92; }
+/* Grille collée : chaque image déborde d’1px sur sa voisine pour masquer les jointures dues aux demi-pixels */
+.gallery:not(.gallery--web) .gallery__item img { width: calc(100% + 1px); max-width: none; margin-bottom: -1px; }
 .gallery__item figcaption {
   position: absolute; left: 10px; bottom: 10px;
   background: var(--paper); padding: 4px 7px 3px;
@@ -808,6 +823,7 @@ body.menu-open { overflow: hidden; }
 }
 .gallery__item:hover figcaption { opacity: 1; }
 .gallery--web .gallery__item { border: 1px solid var(--rule); }
+.gallery--web .gallery__item + .gallery__item { border-top: 0; }
 
 .related { margin-top: clamp(64px, 8vw, 120px); }
 .related ul { margin-top: 14px; }
@@ -831,6 +847,49 @@ body.menu-open { overflow: hidden; }
 
 .notfound { padding-top: calc(var(--header-h) + 18vh); padding-bottom: 12vh; }
 .notfound .case-hero__title { margin-bottom: 40px; }
+
+/* Page mission Sephis ------------------------------------------------------------ */
+.sephis-body { margin-top: clamp(28px, 4vw, 56px); }
+.stats--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stats--5 .stat { grid-column: auto; }
+
+.sephis-steps { margin-top: clamp(40px, 5vw, 80px); row-gap: 40px; }
+.sephis-steps li { grid-column: span 3; border-top: 1px solid var(--rule-strong); padding-top: 12px; }
+.sephis-steps h3 { margin-top: clamp(28px, 3vw, 48px); font: 400 clamp(26px, 2.2vw, 36px)/1.02 var(--f-serif); letter-spacing: -.01em; }
+.sephis-steps p { margin-top: 14px; max-width: 34ch; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+
+.sephis-brands { display: grid; gap: clamp(56px, 7vw, 112px); margin-top: clamp(40px, 6vw, 96px); }
+.sephis-brand { row-gap: 20px; align-items: start; }
+.sephis-brand__info {
+  grid-column: 1 / span 3;
+  position: sticky; top: calc(var(--header-h) + 24px);
+  border-top: 1px solid var(--rule-strong); padding-top: 10px;
+}
+.sephis-brand__name { margin: 18px 0 12px; font: 400 clamp(32px, 3.2vw, 56px)/.95 var(--f-serif); letter-spacing: -.015em; }
+.sephis-brand__grid { grid-column: 4 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+
+.sephis-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: clamp(40px, 6vw, 96px); }
+.sephis-logo { position: relative; display: grid; place-items: center; aspect-ratio: 3 / 2; overflow: hidden; background: #fff; }
+.sephis-logo img { width: auto; height: auto; max-width: 58%; max-height: 38%; object-fit: contain; transition: transform .8s var(--ease); }
+.sephis-logo span { position: absolute; left: 12px; bottom: 10px; color: var(--muted); opacity: 0; transition: opacity .3s var(--ease); }
+.sephis-logo:hover img { transform: scale(1.06); }
+.sephis-logo:hover span { opacity: 1; }
+@media (hover: none) { .sephis-logo span { opacity: 1; } }
+
+@media (max-width: 1100px) {
+  .gallery:not(.gallery--web) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stats--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sephis-steps li { grid-column: span 6; }
+  .sephis-brand__info { grid-column: 1 / -1; position: static; }
+  .sephis-brand__grid { grid-column: 1 / -1; }
+  .sephis-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .stats--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sephis-steps li { grid-column: 1 / -1; }
+  .sephis-brand__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .sephis-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+}
 
 /* Lightbox */
 .lightbox {
@@ -899,6 +958,7 @@ html.is-preloading .preloader { display: block; }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
 
 .js [data-split] .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .08em 0 .2em; margin: -.08em 0 -.2em; }
+.js [data-split] em .w { padding-right: .1em; margin-right: -.1em; } /* évite de rogner la pente des italiques */
 .js [data-split] .w > span {
   display: inline-block; transform: translate3d(0, 110%, 0);
   transition: transform 1.2s var(--ease);
@@ -937,7 +997,7 @@ html.is-preloading .preloader { display: block; }
   .hero__portrait { height: min(72%, 760px); }
   .hero__statement, .hero__facts { display: none; }
   .hero__scroll { margin-top: 0; }
-  .service__num { grid-column: 1 / -1; position: static; font-size: clamp(120px, 30vw, 220px); }
+  .service__num { grid-column: 1 / -1; position: static; font-size: clamp(80px, 22vw, 150px); }
   .service__body { grid-column: 1 / -1; }
   .services__cols { display: none; }
   .works__head, .work__link { grid-template-columns: 56px minmax(0, 1fr) auto 20px; }
@@ -981,10 +1041,10 @@ html.is-preloading .preloader { display: block; }
   .work__idx { grid-row: span 2; align-self: start; padding-top: 6px; }
   .work__thumb { display: none; }
   .works__head { display: none; }
-  .gallery { grid-template-columns: 1fr 1fr; gap: 6px; }
-  .gallery__item--wide { grid-column: auto; aspect-ratio: 3 / 4; }
-  .gallery__item--big { grid-column: 1 / -1; grid-row: auto; aspect-ratio: 3 / 4; }
-  .gallery:not(.gallery--web) .gallery__item:last-child:nth-child(even) { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .gallery { gap: 0; }
+  .gallery:not(.gallery--web) { grid-template-columns: 1fr 1fr; }
+  .gallery--2 { grid-template-columns: 1fr 1fr; }
+  .gallery__item--big { grid-column: 1 / -1; grid-row: auto; }
   .case-body__text, .case-body__list { grid-column: 1 / -1; }
   .case-meta__cell { grid-column: 1 / -1; }
   .works__foot { flex-direction: column; align-items: flex-start; }

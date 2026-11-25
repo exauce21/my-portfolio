@@ -1,5 +1,5 @@
 /* ==========================================================================
-   core.js — comportements communs à toutes les pages
+   core.js - comportements communs à toutes les pages
    (horloge, menu mobile, reveal au scroll, split de titres, copie d'email)
    ========================================================================== */
 (function () {
@@ -129,6 +129,44 @@
     });
   }
 
+  /* ---------- Curseur logo : traînée ----------
+     Dans les zones au curseur « ey » (en-têtes, contact), de petits logos
+     se déposent derrière la souris puis s'effacent. */
+  var CURSOR_ZONES = '.hero, .page-hero, .case-hero, .e404, .contact';
+  function initCursorTrail() {
+    if (!canHover || reduceMotion || !Element.prototype.animate) return;
+    if (!document.querySelector(CURSOR_ZONES)) return;
+    var POOL = 48, STEP = 12, SIZE = 64; // SIZE = taille du curseur (64px)
+    var dots = [], slot = 0, last = null;
+    for (var i = 0; i < POOL; i++) {
+      var d = document.createElement('span');
+      d.className = 'cursor-trail';
+      d.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(d);
+      dots.push({ el: d, anim: null });
+    }
+    document.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      var zone = e.target.closest && e.target.closest(CURSOR_ZONES);
+      if (!zone || e.target.closest('a, button')) { last = null; return; }
+      var x = e.clientX, y = e.clientY;
+      if (last) {
+        var dx = x - last.x, dy = y - last.y;
+        if (dx * dx + dy * dy < STEP * STEP) return;
+      }
+      last = { x: x, y: y };
+      var dot = dots[slot++ % POOL];
+      if (dot.anim) dot.anim.cancel();
+      dot.el.classList.toggle('cursor-trail--light', zone.classList.contains('contact'));
+      var tx = (x - SIZE / 2) + 'px,' + (y - SIZE / 2) + 'px';
+      dot.anim = dot.el.animate([
+        { opacity: .55, transform: 'translate(' + tx + ') scale(1)' },
+        { opacity: 0, transform: 'translate(' + tx + ') scale(.3)' }
+      ], { duration: 1600, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
+    }, { passive: true });
+    document.addEventListener('pointerleave', function () { last = null; });
+  }
+
   /* ---------- Split des titres en mots ---------- */
   EY.split = function (el) {
     if (el.dataset.splitDone) return;
@@ -213,7 +251,7 @@
       brand: P.count('brand'),
       ui: P.count('ui'),
       dev: P.count('dev'),
-      web: P.projects.filter(function (p) { return p.kind === 'web'; }).length
+      web: P.projects.filter(function (p) { return p.kind === 'web' || !!p.sites; }).length
     };
     EY.$$('[data-count]').forEach(function (el) {
       var v = map[el.getAttribute('data-count')];
@@ -270,6 +308,7 @@
     initClock();
     initMenu();
     initNavScramble();
+    initCursorTrail();
     initCopy();
     initCounts();
     initRecos();
